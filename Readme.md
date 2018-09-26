@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Курапов Павел](https://up.htmlacademy.ru/adaptive/15/user/870515).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Кашапов](https://htmlacademy.ru/profile/id214503).
 
 ---
 

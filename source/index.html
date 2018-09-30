@@ -5,8 +5,166 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__logo">
+        <!--TODO: проставить размеры иконки-->
+        <img src="#" alt="Мишка" class="header__logo-icon">
+      </div>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+      <nav class="main-nav header__menu">
+        <button class="main-nav__list-toggle">Открыть</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">Пункт 1</li>
+          <li class="main-nav__list-item">Пункт 2</li>
+          <li class="main-nav__list-item">Пункт 3</li>
+        </ul>
+      </nav>
 
+      <div class="header__title-wrapper">
+        <h1 class="header__title">Милые штуки ручной работы для дома</h1>
+      </div>
+
+      <ul class="header__categories-list">
+        <li class="header__category-item">
+          <a href="#" class="header__category-link">
+            <span class="header__category-title">Предметы интерьера</span>
+            <img src="#" alt="Предметы интерьера" class="header__category-icon" height="62" width="40">
+          </a>
+        </li>
+
+        <!--TODO: на макете цвет темнее, тут надо задать модификатор или лучше через nth-child(odd) ? -->
+        <li class="header_category-item">
+            <a href="#" class="header__category-link">
+            <span class="header__category-title">Детские игрушки</span>
+            <img src="#" alt="Детские игрушки" class="header__category-icon" height="60" width="60">
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="week-product">
+        <h2>Вязаные корзинки</h2>
+        <span class="week-product__sub-title">товар недели</span>
+        <p class="week-product__about">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+
+        <ul class="week-product__info-list">
+          <li class="week-product__info-item">
+            <span class="week-product__info-name">Цвет:</span>
+            <span class="week-product__info-value">"Тиффани"/серый</span>
+          </li>
+          <li class="week-product__info-item">
+            <span class="week-product__info-name">Диаметр:</span>
+            <span class="week-product__info-value">25&nbsp;см</span>
+          </li>
+          <li class="week-product__info-item">
+            <span class="week-product__info-name">Высота:</span>
+            <span class="week-product__info-value">15&nbsp;см</span>
+          </li>
+        </ul>
+
+        <img src="#" alt="Товар недели" class="week-product__image" width="260" height="320">
+
+        <div class="week-product__price-wrapper">
+          <span class="week-product__price-title">Цена:</span>
+          <span class="week-product__price-value">990&nbsp;руб.</span>
+        </div>
+
+        <!-- TODO: не совсем понятно, что должно происходить по нажатию, поэтому не понятно ссылка это или кнопка -->
+        <a href="#" class="button">Заказать</a>
+      </section>
+
+      <!--TODO: проставить размеры иконок-->
+      <section class="about">
+        <h2>Коротко о нас</h2>
+
+        <ul class="about__list">
+          <li class="about__list-item">
+            <img src="#" alt="Экологически чистые материалы" class="about__item-icon">
+            <span class="about__item-text">Экологически чистые материалы</span>
+          </li>
+          <li class="about__list-item">
+            <img src="#" alt="Скандинавский стиль по российской цене" class="about__item-icon">
+            <span class="about__item-text">Скандинавский стиль по российской цене</span>
+          </li>
+          <li class="about__list-item">
+            <img src="#" alt="Увеличивает лайки на фотографиях" class="about__item-icon">
+            <span class="about__item-text">Увеличивает лайки на фотографиях</span>
+          </li>
+          <li class="about__list-item">
+            <img src="#" alt="Связано вручную с любовью и умилением" class="about__item-icon">
+            <span class="about__item-text">Связано вручную с любовью и умилением</span>
+          </li>
+          <li class="about__list-item">
+            <img src="" alt="Поддержка отечественного производителя" class="about__item-icon">
+            <span class="about__item-text">Поддержка отечественного производителя</span>
+          </li>
+          <li class="about__list-item">
+            <img src="" alt="Поставляется в подарочной упаковке" class="about__item-icon">
+            <span class="about__item-text">Поставляется в подарочной упаковке</span>
+          </li>
+        </ul>
+
+        <!-- TODO: может отзывы стоило сделать отдельным блоком ? отзывы больше нигде не повторяются, но выглядит коряво -->
+        <div class="about__reviews">
+          <h3>Отзывы</h3>
+
+          <ul class="about__reviews-list">
+            <li class="about__review">
+              <p class="about__review-text">
+                Я молодая мама, но всё равно фотографии не набрали и близко такого количества лайков, как у популярных инстамамочек.
+                В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+              </p>
+
+              <span class="about__review-author-name">Анастасия Красильникова</span>
+              <span class="about__review-author-nick">@misssssiskras</span>
+            </li>
+          </ul>
+
+          <div class="about__reviews-controls-wrapper">
+            <button class="about__prev-review"></button>
+            <button class="about__next-review"></button>
+          </div>
+
+          <a href="#" class="button">Написать</a>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <ul class="contacts__list">
+          <li>
+            <span class="contacts__contact-name">e-mail</span>
+            <span class="contacts__contacts-value">info@mimimishkashop.ru</span>
+          </li>
+          <li>
+            <span class="contacts__contact-name">адрес</span>
+            <span class="contacts__contacts-value">г. Санкт-Петербург ул.Большая Конюшенная, д. 19/8, офис 101</span>
+          </li>
+        </ul>
+
+        <!--TODO: тут должна быть картинка или реальаня карта ? -->
+        <div class="contacts__map-wrapper"></div>
+
+        <a href="#" class="button">Напишите нам</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!--TODO: проставить размеры иконок-->
+      <ul class="footer__social-list">
+        <li><a href="#" class="footer__social-link"><img src="#" alt="instagram"></a></li>
+        <li><a href="#" class="footer__social-link"><img src="#" alt="facebook"></a></li>
+        <li><a href="#" class="footer__social-link"><img src="#" alt="twitter"></a></li>
+      </ul>
+
+      <div class="footer__dividing-line"></div>
+
+      <div class="footer__created-by">
+        <span class="footer__created-by--title">Разработано</span>
+        <!--TODO: проставить размеры иконоки-->
+        <img src="#" alt="Разработано в HTML Academy" class="created-by-logo">
+      </div>
+    </footer>
   </body>
 </html>

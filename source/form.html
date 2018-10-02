@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="http://placehold.it/75x35" alt="Мишка" class="header__logo-icon" width="75" height="35">
+      </div>
+
+      <nav class="main-nav header__menu">
+        <button class="main-nav__list-toggle">Открыть</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">Пункт 1</li>
+          <li class="main-nav__list-item">Пункт 2</li>
+          <li class="main-nav__list-item">Пункт 3</li>
+        </ul>
+      </nav>
+
+      <div class="header__title-wrapper">
+        <h1 class="header__title">Вязание на заказ</h1>
+      </div>
+    </header>
+
+    <form action="https://echo.htmlacademy.ru" method="POST" class="form">
+      <p class="form__text">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__label">Тип</legend>
+
+        <div class="radio">
+          <input class="radio__input" type="radio" id="decor" name="type" value="decor">
+          <label class="radio__title" for="decor">Аксессуар для интерьера</label>
+        </div>
+
+        <div class="radio">
+          <input class="radio__input" type="radio" id="toy" name="type" value="toy">
+          <label class="radio__title" for="toy">Детская игрушка</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__label">Цвет</legend>
+
+        <div class="checkbox">
+          <input class="checkbox__input" id="color-white" name="color-white" type="checkbox">
+          <label class="checkbox__title" for="color-white">Белый</label>
+        </div>
+
+        <div class="checkbox">
+          <input class="checkbox__input" id="color-gray" name="color-gray" type="checkbox">
+          <label class="checkbox__title" for="color-gray">Серый</label>
+        </div>
+
+        <div class="checkbox">
+          <input class="checkbox__input" id="color-tiffani" name="color-tiffani" type="checkbox">
+          <label class="checkbox__title" for="color-tiffani">"Тиффани"</label>
+        </div>
+
+        <div class="checkbox">
+          <input class="checkbox__input" id="color-black" name="color-black" type="checkbox">
+          <label class="checkbox__title" for="color-black">Черный</label>
+        </div>
+
+        <div class="checkbox">
+          <input class="checkbox__input" id="color-pink" name="color-pink" type="checkbox">
+          <label class="checkbox__title" for="color-pink">Розовый</label>
+        </div>
+
+        <div class="checkbox">
+          <input class="checkbox__input" id="color-orange" name="color-orange" type="checkbox">
+          <label class="checkbox__title" for="color-orange">Оранжевый</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend class="form__label">ФИО</legend>
+
+        <div class="input-text">
+          <label class="input-text__title" for="first-name">Имя</label>
+          <input class="input-text__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+        </div>
+
+        <div class="input-text">
+          <label class="input-text__title" for="last-name">Фамилия</label>
+          <input class="input-text__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
+        </div>
+
+        <div class="input-text">
+          <label class="input-text__title" for="fathers-name">Отчество</label>
+          <input class="input-text__input" type="text" id="fathers-name" name="fathers-name" placeholder="Отчество, если пожелаете">
+        </div>
+      </fieldset>
+
+      <div class="input-text">
+        <!--TODO: тут я использовал микс input-text__title И form__label, у них разные пересекающиеся стили.
+        Значит в стилях класс form__label должен переопределять стили input-text__title,
+        или может я не правильно что-то понял ? Получается label
+        выполняет функцию описания текстового поля и также функцию обозначающую группу данных в форме,
+        а стили нужно применить именно от form__label,
+        как правильно по БЭМ'у это сделать ? -->
+
+        <label class="input-text__title form__label" for="phone">Тел</label>
+        <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+        <img src="http://placehold.it/25x25" alt="Иконка - телефон" class="input-text__icon input-text__icon--phone" width="25" height="25">
+      </div>
+
+      <div class="input-text">
+        <label class="input-text__title form__label" for="email">E-mail</label>
+        <input class="input-text__input" type="email" id="email" name="email" placeholder="Ваш Email*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
+        <img src="http://placehold.it/30x20" alt="Иконка - письмо" class="input-text__icon input-text__icon--letter" width="30" height="20">
+      </div>
+
+      <div class="input-text-area">
+        <label class="input-text__title form__label" for="comment">Доп</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </div>
+
+      <p class="form__hint">*Поля обязательны для заполнения</p>
+      <button class="button">Оформить заказ</button>
+    </form>
+
+    <footer class="footer">
+      <ul class="footer__social-list">
+        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/20x20" alt="instagram" width="20" height="20"></a></li>
+        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/15x30" alt="facebook" width="15" height="30"></a></li>
+        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/25x20" alt="twitter" width="25" height="20"></a></li>
+      </ul>
+
+      <div class="footer__dividing-line"></div>
+
+      <div class="footer__created-by">
+        <span class="footer__created-by--title">Разработано</span>
+        <img src="http://placehold.it/25x35" alt="Разработано в HTML Academy" class="created-by-logo"  width="25" height="35">
+      </div>
+    </footer>
+  </body>
+</html>

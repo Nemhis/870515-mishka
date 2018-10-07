@@ -1,3 +1,18 @@
-body {
-  background: red;
-}
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/main-nav";
+@import "blocks/categories-list";
+@import "blocks/week-product";
+@import "blocks/wavy-line";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/contacts";
+@import "blocks/products";
+@import "blocks/product-card";
+@import "blocks/production-process";
+@import "blocks/button";
+@import "blocks/form";
+@import "blocks/input-checkbox";
+@import "blocks/input-radio";
+@import "blocks/input-text";
+@import "blocks/input-text-area";

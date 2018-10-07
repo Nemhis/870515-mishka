@@ -33,48 +33,48 @@
       <fieldset class="form__fieldset">
         <legend class="form__label">Тип</legend>
 
-        <div class="radio">
-          <input class="radio__input" type="radio" id="decor" name="type" value="decor">
-          <label class="radio__title" for="decor">Аксессуар для интерьера</label>
+        <div class="input-radio">
+          <input class="input-radio__input" type="radio" id="decor" name="type" value="decor">
+          <label class="input-radio__title" for="decor">Аксессуар для интерьера</label>
         </div>
 
-        <div class="radio">
-          <input class="radio__input" type="radio" id="toy" name="type" value="toy">
-          <label class="radio__title" for="toy">Детская игрушка</label>
+        <div class="input-radio">
+          <input class="input-radio__input" type="radio" id="toy" name="type" value="toy">
+          <label class="input-radio__title" for="toy">Детская игрушка</label>
         </div>
       </fieldset>
 
       <fieldset class="form__fieldset">
         <legend class="form__label">Цвет</legend>
 
-        <div class="checkbox">
-          <input class="checkbox__input" id="color-white" name="color-white" type="checkbox">
-          <label class="checkbox__title" for="color-white">Белый</label>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input" id="color-white" name="color-white" type="checkbox">
+          <label class="input-checkbox__title" for="color-white">Белый</label>
         </div>
 
-        <div class="checkbox">
-          <input class="checkbox__input" id="color-gray" name="color-gray" type="checkbox">
-          <label class="checkbox__title" for="color-gray">Серый</label>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input" id="color-gray" name="color-gray" type="checkbox">
+          <label class="input-checkbox__title" for="color-gray">Серый</label>
         </div>
 
-        <div class="checkbox">
-          <input class="checkbox__input" id="color-tiffani" name="color-tiffani" type="checkbox">
-          <label class="checkbox__title" for="color-tiffani">"Тиффани"</label>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input" id="color-tiffani" name="color-tiffani" type="checkbox">
+          <label class="input-checkbox__title" for="color-tiffani">"Тиффани"</label>
         </div>
 
-        <div class="checkbox">
-          <input class="checkbox__input" id="color-black" name="color-black" type="checkbox">
-          <label class="checkbox__title" for="color-black">Черный</label>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input" id="color-black" name="color-black" type="checkbox">
+          <label class="input-checkbox__title" for="color-black">Черный</label>
         </div>
 
-        <div class="checkbox">
-          <input class="checkbox__input" id="color-pink" name="color-pink" type="checkbox">
-          <label class="checkbox__title" for="color-pink">Розовый</label>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input" id="color-pink" name="color-pink" type="checkbox">
+          <label class="input-checkbox__title" for="color-pink">Розовый</label>
         </div>
 
-        <div class="checkbox">
-          <input class="checkbox__input" id="color-orange" name="color-orange" type="checkbox">
-          <label class="checkbox__title" for="color-orange">Оранжевый</label>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input" id="color-orange" name="color-orange" type="checkbox">
+          <label class="input-checkbox__title" for="color-orange">Оранжевый</label>
         </div>
       </fieldset>
 
@@ -99,13 +99,13 @@
 
       <div class="input-text">
         <label class="input-text__title" for="phone">Тел</label>
-        <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+        <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
         <img src="http://placehold.it/25x25" alt="Иконка - телефон" class="input-text__icon input-text__icon--phone" width="25" height="25">
       </div>
 
       <div class="input-text">
         <label class="input-text__title form__label" for="email">E-mail</label>
-        <input class="input-text__input" type="email" id="email" name="email" placeholder="Ваш Email*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
+        <input class="input-text__input" type="email" id="email" name="email" placeholder="Ваш Email*" required>
         <img src="http://placehold.it/30x20" alt="Иконка - письмо" class="input-text__icon input-text__icon--letter" width="30" height="20">
       </div>
 

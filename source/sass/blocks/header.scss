@@ -1,13 +1,12 @@
 @import "../variables";
 
 .header {
-  // header block
+  background: url("../img/hero-mobile@1x.jpg") 100% 100% no-repeat;
+  min-height: 320px;
 }
 
-.header__title-wrapper {
-  background-color: $bg-dark;
-}
-
-.header__title-wrapper--theme-hero {
-  background: url("/img/hero-mobile@1x.jpg") 100% 100% no-repeat;
+@media (min-width: $tablet-width) {
+  .header {
+    min-height: 715px;
+  }
 }

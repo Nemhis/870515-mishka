@@ -7,20 +7,49 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <img src="http://placehold.it/75x35" alt="Мишка" class="header__logo-icon" width="75" height="35">
-      </div>
+  <header class="header">
 
-      <nav class="main-nav header__menu">
-        <button class="main-nav__list-toggle">Открыть</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item">Пункт 1</li>
-          <li class="main-nav__list-item">Пункт 2</li>
-          <li class="main-nav__list-item">Пункт 3</li>
-        </ul>
-      </nav>
 
+    <nav class="main-nav header__menu">
+      <div class="main-nav__menu-layout"></div>
+
+      <button class="main-nav__list-toggle">Открыть</button>
+
+      <!-- TODO: расставить ссылки -->
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item main-nav__list-item--logo">
+          <a href="#" class="main-nav__link">
+            <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
+          </a>
+        </li>
+        <li class="main-nav__list-item main-nav__list-item--catalog">
+          <a href="#" class="main-nav__link">
+            <span>Каталог товаров</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item main-nav__list-item--order">
+          <a href="#" class="main-nav__link">
+            <span>Вязание на заказ</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item main-nav__list-item--search">
+          <a href="#" class="main-nav__link">
+            <img src="http://placehold.it/20x20" alt="Поиск по сайту" class="main-nav__search-icon">
+            <span class=" main-nav__search-title">Поиск по сайту</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item main-nav__list-item--cart">
+          <a href="#" class="main-nav__link">
+            <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+            <span>Корзина: пока пуста</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <div class="center-layout">
       <div class="header__title-wrapper header__title-wrapper--theme-hero">
         <h1 class="header__title">Милые штуки ручной работы для дома</h1>
       </div>
@@ -29,23 +58,30 @@
         <li class="categories-list__item">
           <a href="#" class="categories-list__link">
             <span class="categories-list__title">Предметы интерьера</span>
-            <img src="http://placehold.it/40x60" alt="Предметы интерьера" class="categories-list__icon" height="60" width="40">
+            <img src="http://placehold.it/40x60" alt="Предметы интерьера" class="categories-list__icon" height="60"
+                 width="40">
           </a>
         </li>
 
         <li class="categories-list__item categories-list__item--dark">
-            <a href="#" class="categories-list__link">
+          <a href="#" class="categories-list__link">
             <span class="categories-list__title">Детские игрушки</span>
-            <img src="http://placehold.it/60x60" alt="Детские игрушки" class="categories-list__icon" height="60" width="60">
+            <img src="http://placehold.it/60x60" alt="Детские игрушки" class="categories-list__icon" height="60"
+                 width="60">
           </a>
         </li>
       </ul>
-    </header>
+
+    </div>
+  </header>
 
     <main>
-      <section class="week-product">
-        <h2>Вязаные корзинки</h2>
-        <span class="week-product__sub-title">товар недели</span>
+      <section class="week-product center-layout">
+        <div class="week-product__titles-wrapper">
+          <h2 class="week-product__title">Вязаные корзинки</h2>
+          <span class="week-product__sub-title">товар недели</span>
+        </div>
+
         <p class="week-product__about">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
 
         <ul class="week-product__info-list">
@@ -151,7 +187,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__content-wrapper">
+      <div class="footer__content-wrapper center-layout">
         <div class="footer__logo">
           <img src="http://placehold.it/100x35" alt="Мишка" class="footer__logo-icon" width="100" height="35">
         </div>

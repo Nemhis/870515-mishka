@@ -2,18 +2,32 @@
 
 .header {
   background: url("../img/hero-mobile@1x.jpg") 50% 0 no-repeat $bg-light;
-  min-height: 320px;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__title {
-  margin-top: 0;
+  padding-top: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
 }
 
+.header__categories-list {
+  margin-top: auto;
+}
 
 @media (min-width: $tablet-width) {
   .header {
     background: url("../img/hero-tablet@1x.jpg") 50% 0 no-repeat $bg-light;
     min-height: 715px;
+  }
+
+  .header__title {
+    padding-top: 160px;
+    width: 500px;
+    margin: 0 auto;
   }
 }
 

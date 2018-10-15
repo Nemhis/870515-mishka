@@ -8,26 +8,49 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <img src="http://placehold.it/75x35" alt="Мишка" class="header__logo-icon" width="75" height="35">
-      </div>
-
       <nav class="main-nav header__menu">
+        <div class="main-nav__menu-layout"></div>
+
         <button class="main-nav__list-toggle">Открыть</button>
+
+        <!-- TODO: расставить ссылки -->
         <ul class="main-nav__list">
-          <li class="main-nav__list-item">Пункт 1</li>
-          <li class="main-nav__list-item">Пункт 2</li>
-          <li class="main-nav__list-item">Пункт 3</li>
+          <li class="main-nav__list-item main-nav__list-item--logo">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--catalog">
+            <a href="#" class="main-nav__link">
+              <span>Каталог товаров</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--order">
+            <a href="#" class="main-nav__link">
+              <span>Вязание на заказ</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--search">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/20x20" alt="Поиск по сайту" class="main-nav__search-icon">
+              <span class=" main-nav__search-title">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--cart">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
         </ul>
       </nav>
-
       <div class="header__title-wrapper">
         <h1 class="header__title">Каталог товаров</h1>
       </div>
     </header>
 
     <main>
-      <section class="products">
+      <section class="products center-layout">
         <h2 class="visually-hidden">Список товаров</h2>
 
         <ul class="products__products-list">

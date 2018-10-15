@@ -1,3 +1,44 @@
+@import "../variables";
+
 .reviews {
   // reviews block
 }
+
+.reviews__title {
+  margin: 0;
+}
+
+.reviews__reviews-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.reviews__review-text {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__content-wrapper {
+    position: relative;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .reviews__reviews-controls-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__content-wrapper {
+    padding-left: 175px;
+  }
+}
+

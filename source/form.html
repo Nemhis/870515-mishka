@@ -31,8 +31,8 @@
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
 
-      <fieldset class="form__fieldset">
-        <legend class="form__label">Тип</legend>
+      <div class="form__div">
+        <span class="form__label">Тип</span>
 
         <div class="input-radio">
           <input class="input-radio__input" type="radio" id="decor" name="type" value="decor">
@@ -43,10 +43,10 @@
           <input class="input-radio__input" type="radio" id="toy" name="type" value="toy">
           <label class="input-radio__title" for="toy">Детская игрушка</label>
         </div>
-      </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset">
-        <legend class="form__label">Цвет</legend>
+      <div class="form__div">
+        <span class="form__label">Цвет</span>
 
         <div class="input-checkbox">
           <input class="input-checkbox__input" id="color-white" name="color-white" type="checkbox">
@@ -77,10 +77,10 @@
           <input class="input-checkbox__input" id="color-orange" name="color-orange" type="checkbox">
           <label class="input-checkbox__title" for="color-orange">Оранжевый</label>
         </div>
-      </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset">
-        <legend class="form__label">ФИО</legend>
+      <div class="form__div">
+        <span class="form__label">ФИО</span>
 
         <div class="input-text">
           <label class="input-text__title" for="first-name">Имя</label>
@@ -96,9 +96,9 @@
           <label class="input-text__title" for="fathers-name">Отчество</label>
           <input class="input-text__input" type="text" id="fathers-name" name="fathers-name" placeholder="Отчество, если пожелаете">
         </div>
-      </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset">
+      <div class="form__div">
         <span class="form__label">Тел</span>
 
         <div class="input-text">
@@ -106,9 +106,9 @@
           <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
           <img src="http://placehold.it/25x25" alt="Иконка - телефон" class="input-text__icon input-text__icon--phone" width="25" height="25">
         </div>
-      </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset">
+      <div class="form__div">
         <span class="form__label">E-mail</span>
 
         <div class="input-text">
@@ -116,16 +116,16 @@
           <input class="input-text__input" type="email" id="email" name="email" placeholder="Ваш Email*" required>
           <img src="http://placehold.it/30x20" alt="Иконка - письмо" class="input-text__icon input-text__icon--letter" width="30" height="20">
         </div>
-      </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset">
+      <div class="form__div">
         <span class="form__label">Доп</span>
 
         <div class="input-text-area">
           <label class="visually-hidden" for="comment">Дополнительная информация</label>
           <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
-      </fieldset>
+      </div>
 
       <p class="form__hint">*Поля обязательны для заполнения</p>
       <button class="button">Оформить заказ</button>

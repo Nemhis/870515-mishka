@@ -1,3 +1,53 @@
+@import "../variables";
+
 .form {
   // form block
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+}
+
+.form__group-label {
+  color: $base-light;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .form__group {
+    flex-direction: row;
+    padding: 50px 0;
+
+    &--bg-dark {
+      background-color: $bg-dark;
+    }
+  }
+
+  .form__group-label {
+    width: 167px;
+  }
+
+  .form__button-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__group,
+  .form__button-wrapper {
+    padding-right: 175px;
+  }
+
+  .form__group-label {
+    width: 175px;
+  }
 }

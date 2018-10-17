@@ -1,5 +1,9 @@
 @import "../variables";
 
+.week-product {
+  margin-bottom: 35px;
+}
+
 .week-product__titles-wrapper {
   display: flex;
   flex-direction: column;
@@ -23,6 +27,7 @@
 @media (min-width: $tablet-width) {
   .week-product {
     position: relative;
+    margin-bottom: 52px;
   }
 
   .week-product__titles-wrapper {
@@ -62,6 +67,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .week-product {
+    margin-bottom: 72px;
+  }
+
   .week-product__titles-wrapper {
     position: absolute;
     top: 135px;

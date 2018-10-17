@@ -1,7 +1,7 @@
 @import "../variables";
 
 .reviews {
-  // reviews block
+  margin-bottom: 45px;
 }
 
 .reviews__title {
@@ -19,6 +19,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .reviews {
+    margin-bottom: 65px;
+  }
+
   .reviews__content-wrapper {
     position: relative;
   }

@@ -1,7 +1,7 @@
 @import "../variables";
 
 .contacts {
-  // contacts block
+  margin-bottom: 40px;
 }
 
 .contacts__title {
@@ -32,6 +32,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts {
+    margin-bottom: 57px;
+  }
+
   .contacts__title-wrapper {
     display: flex;
     flex-direction: row;
@@ -46,6 +50,7 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+    margin-bottom: 105px;
   }
 
   .contacts__title-wrapper {

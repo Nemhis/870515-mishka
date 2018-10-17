@@ -6,6 +6,7 @@
   flex-direction: column;
   position: relative;
   background-color: $bg-dark;
+  margin-bottom: 30px;
 
   &--theme-hero {
     min-height: 560px;
@@ -41,10 +42,12 @@
 @media (min-width: $tablet-width) {
   .header {
     min-height: 230px;
+    margin-bottom: 80px;
 
     &--theme-hero {
       min-height: 832px;
       background: url("../img/hero-tablet@1x.jpg") 50% 100% no-repeat $bg-light;
+      margin-bottom: 55px;
     }
   }
 
@@ -69,8 +72,11 @@
 
 @media (min-width: $desktop-width) {
   .header {
+    margin-bottom: 130px;
+
     &--theme-hero {
       background: url("../img/hero-desktop@1x.jpg") 50% 0 no-repeat $bg-light;
+      margin-bottom: 70px;
     }
   }
 

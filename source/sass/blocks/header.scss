@@ -33,6 +33,9 @@
 
 .header__promo-list {
   font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -45,17 +48,22 @@
     }
   }
 
-  .header__delivery {
-    display: inline;
-    top: 110px;
-    right: 0;
-    position: absolute;
-  }
-
   .header__title {
     padding-top: 160px;
     width: 500px;
     margin: 0 auto;
+  }
+
+  .header_promo-container {
+    position: relative;
+    height: 1px;
+  }
+
+  .header__delivery {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: -70px;
   }
 }
 
@@ -64,5 +72,26 @@
     &--theme-hero {
       background: url("../img/hero-desktop@1x.jpg") 50% 0 no-repeat $bg-light;
     }
+  }
+
+  .header_promo-container {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  .header__delivery {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .header__promo-list {
+    display: flex;
+  }
+
+  .header__promo-list-item {
+    margin-right: 60px;
   }
 }

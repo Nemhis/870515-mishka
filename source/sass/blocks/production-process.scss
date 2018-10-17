@@ -3,6 +3,7 @@
 .production-process {
   display: flex;
   flex-direction: column;
+  margin-bottom: 58px;
 }
 
 .production-process__video-container {
@@ -22,6 +23,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .production-process {
+    margin-bottom: 63px;
+  }
+
   .production-process__container {
     display: flex;
     flex-direction: column-reverse;
@@ -35,6 +40,7 @@
 @media (min-width: $desktop-width) {
   .production-process {
     flex-direction: row;
+    margin-bottom: 105px;
   }
 
   .production-process__container {

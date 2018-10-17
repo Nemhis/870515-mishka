@@ -9,12 +9,10 @@
   <body>
     <header class="header">
       <nav class="main-nav header__menu">
-        <div class="main-nav__menu-layout"></div>
-
         <button class="main-nav__list-toggle">Открыть</button>
 
         <!-- TODO: расставить ссылки -->
-        <ul class="main-nav__list">
+        <ul class="main-nav__list center-layout">
           <li class="main-nav__list-item main-nav__list-item--logo">
             <a href="#" class="main-nav__link">
               <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
@@ -38,12 +36,22 @@
           </li>
           <li class="main-nav__list-item main-nav__list-item--cart">
             <a href="#" class="main-nav__link">
-              <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+              <img src="http://placehold.it/20x20" alt="Корзина" class="main-nav__cart-icon">
               <span>Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
       </nav>
+
+      <div class="header_promo-container center-layout">
+        <ul class="header__promo-list">
+          <li class="header__promo-list-item">Новы поступления</li>
+          <li class="header__promo-list-item">Распродажа</li>
+        </ul>
+
+        <span class="header__delivery">Бесплатная доставка по России</span>
+      </div>
+
       <div class="header__title-wrapper">
         <h1 class="header__title">Каталог товаров</h1>
       </div>

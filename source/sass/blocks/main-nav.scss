@@ -2,9 +2,10 @@
 
 // TODO: не получается отцентровать блок навигации в десктопной версии
 .main-nav {
-  // main-nav block
+  background: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 23%);
 }
 
+// TODO: убрать
 .main-nav__menu-layout {
   width: 100%;
   background-color: #ffffff;
@@ -22,8 +23,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 0;
   list-style: none;
 }
 
@@ -48,6 +47,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-nav {
+    background: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 51%);
+  }
+
   .main-nav__menu-layout,
   .main-nav__list-item {
     height: 90px;
@@ -66,6 +69,7 @@
 
   .main-nav__list-item--catalog,
   .main-nav__list-item--order {
+    padding-top: 20px;
     order: 6;
     align-items: flex-start;
   }
@@ -76,6 +80,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    background: none;
+    border-bottom: 1px solid $character;
+  }
+
   .main-nav__list-item--catalog,
   .main-nav__list-item--order {
     order: 4;

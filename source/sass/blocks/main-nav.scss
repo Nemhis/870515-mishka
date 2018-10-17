@@ -1,20 +1,7 @@
 @import "../variables";
 
-// TODO: не получается отцентровать блок навигации в десктопной версии
 .main-nav {
   background: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 23%);
-}
-
-// TODO: убрать
-.main-nav__menu-layout {
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid $character;
-}
-
-.main-nav__menu-layout,
-.main-nav__list-item {
-  height: 80px;
 }
 
 .main-nav__list {
@@ -27,10 +14,15 @@
 }
 
 .main-nav__list-item {
+  height: 80px;
   order: 5;
-  padding: 10px 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 75px;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid $character;
 }
 
 .main-nav__link {
@@ -39,7 +31,18 @@
 }
 
 .main-nav__list-item--logo {
-  text-align: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.main-nav__list-item--search,
+.main-nav__list-item--cart {
+  padding-left: 30px;
+}
+
+.main-nav__cart-icon,
+.main-nav__search-icon {
+  margin-right: 20px;
 }
 
 .main-nav__list-toggle {
@@ -56,22 +59,58 @@
     height: 90px;
   }
 
+  .main-nav__list-item {
+    background-color: initial;
+    border-bottom: none;
+  }
+
   .main-nav__list {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 668px;
+    margin: 0 auto;
   }
 
   .main-nav__list-item--logo {
-    width: 320px;
+    width: 220px;
+    justify-content: flex-start;
     text-align: initial;
     margin-right: auto;
+    padding-left: 0;
   }
 
   .main-nav__list-item--catalog,
   .main-nav__list-item--order {
     padding-top: 20px;
+    padding-left: 0;
+    margin-right: 35px;
     order: 6;
     align-items: flex-start;
+  }
+
+  .main-nav__list-item--cart {
+    width: 265px;
+    padding-right: 0;
+    justify-content: flex-end;
+  }
+
+  .main-nav__list-item--search {
+    width: 83px;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .main-nav__list-item--search,
+  .main-nav__list-item--cart {
+    border-left: 1px solid $character;
+  }
+
+  .man-nav__cart-icon {
+    margin-right: 30px;
+  }
+
+  .main-nav__search-icon {
+    margin-right: 0;
   }
 
   .main-nav__search-title {
@@ -85,10 +124,19 @@
     border-bottom: 1px solid $character;
   }
 
+  .main-nav__list {
+    width: 1050px;
+  }
+
   .main-nav__list-item--catalog,
   .main-nav__list-item--order {
     order: 4;
     align-items: center;
+  }
+
+  .main-nav__list-item--logo {
+    margin: 0 auto;
+    width: auto;
   }
 }
 

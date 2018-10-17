@@ -3,133 +3,189 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <img src="http://placehold.it/75x35" alt="Мишка" class="header__logo-icon" width="75" height="35">
-      </div>
-
       <nav class="main-nav header__menu">
+        <div class="main-nav__menu-layout"></div>
+
         <button class="main-nav__list-toggle">Открыть</button>
+
+        <!-- TODO: расставить ссылки -->
         <ul class="main-nav__list">
-          <li class="main-nav__list-item">Пункт 1</li>
-          <li class="main-nav__list-item">Пункт 2</li>
-          <li class="main-nav__list-item">Пункт 3</li>
+          <li class="main-nav__list-item main-nav__list-item--logo">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--catalog">
+            <a href="#" class="main-nav__link">
+              <span>Каталог товаров</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--order">
+            <a href="#" class="main-nav__link">
+              <span>Вязание на заказ</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--search">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/20x20" alt="Поиск по сайту" class="main-nav__search-icon">
+              <span class=" main-nav__search-title">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--cart">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
         </ul>
       </nav>
-
       <div class="header__title-wrapper">
         <h1 class="header__title">Вязание на заказ</h1>
       </div>
     </header>
 
-    <form action="https://echo.htmlacademy.ru" method="POST" class="form">
+    <form action="https://echo.htmlacademy.ru" method="POST" class="form center-layout">
       <p class="form__text">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
 
-      <fieldset class="form__fieldset">
-        <legend class="form__label">Тип</legend>
+      <div class="form__group">
+        <span class="form__group-label">Тип</span>
 
-        <div class="input-radio">
-          <input class="input-radio__input" type="radio" id="decor" name="type" value="decor">
-          <label class="input-radio__title" for="decor">Аксессуар для интерьера</label>
+        <div class="form__inputs-group">
+          <div class="input-radio">
+            <input class="input-radio__input" type="radio" id="decor" name="type" value="decor">
+            <label class="input-radio__title" for="decor">Аксессуар для интерьера</label>
+          </div>
+
+          <div class="input-radio">
+            <input class="input-radio__input" type="radio" id="toy" name="type" value="toy">
+            <label class="input-radio__title" for="toy">Детская игрушка</label>
+          </div>
         </div>
-
-        <div class="input-radio">
-          <input class="input-radio__input" type="radio" id="toy" name="type" value="toy">
-          <label class="input-radio__title" for="toy">Детская игрушка</label>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__fieldset">
-        <legend class="form__label">Цвет</legend>
-
-        <div class="input-checkbox">
-          <input class="input-checkbox__input" id="color-white" name="color-white" type="checkbox">
-          <label class="input-checkbox__title" for="color-white">Белый</label>
-        </div>
-
-        <div class="input-checkbox">
-          <input class="input-checkbox__input" id="color-gray" name="color-gray" type="checkbox">
-          <label class="input-checkbox__title" for="color-gray">Серый</label>
-        </div>
-
-        <div class="input-checkbox">
-          <input class="input-checkbox__input" id="color-tiffani" name="color-tiffani" type="checkbox">
-          <label class="input-checkbox__title" for="color-tiffani">"Тиффани"</label>
-        </div>
-
-        <div class="input-checkbox">
-          <input class="input-checkbox__input" id="color-black" name="color-black" type="checkbox">
-          <label class="input-checkbox__title" for="color-black">Черный</label>
-        </div>
-
-        <div class="input-checkbox">
-          <input class="input-checkbox__input" id="color-pink" name="color-pink" type="checkbox">
-          <label class="input-checkbox__title" for="color-pink">Розовый</label>
-        </div>
-
-        <div class="input-checkbox">
-          <input class="input-checkbox__input" id="color-orange" name="color-orange" type="checkbox">
-          <label class="input-checkbox__title" for="color-orange">Оранжевый</label>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__fieldset">
-        <legend class="form__label">ФИО</legend>
-
-        <div class="input-text">
-          <label class="input-text__title" for="first-name">Имя</label>
-          <input class="input-text__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
-        </div>
-
-        <div class="input-text">
-          <label class="input-text__title" for="last-name">Фамилия</label>
-          <input class="input-text__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
-        </div>
-
-        <div class="input-text">
-          <label class="input-text__title" for="fathers-name">Отчество</label>
-          <input class="input-text__input" type="text" id="fathers-name" name="fathers-name" placeholder="Отчество, если пожелаете">
-        </div>
-      </fieldset>
-
-      <div class="input-text">
-        <label class="input-text__title" for="phone">Тел</label>
-        <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
-        <img src="http://placehold.it/25x25" alt="Иконка - телефон" class="input-text__icon input-text__icon--phone" width="25" height="25">
       </div>
 
-      <div class="input-text">
-        <label class="input-text__title form__label" for="email">E-mail</label>
-        <input class="input-text__input" type="email" id="email" name="email" placeholder="Ваш Email*" required>
-        <img src="http://placehold.it/30x20" alt="Иконка - письмо" class="input-text__icon input-text__icon--letter" width="30" height="20">
+      <div class="form__group form__group--bg-dark">
+        <!-- TODO: создавать ещё одну обёртку центровщик ? необходимо чтобы фон был серый по всей ширине -->
+        <span class="form__group-label">Цвет</span>
+
+        <div class="form__inputs-group">
+          <div class="input-checkbox">
+            <input class="input-checkbox__input" id="color-white" name="color-white" type="checkbox">
+            <label class="input-checkbox__title" for="color-white">Белый</label>
+          </div>
+
+          <div class="input-checkbox">
+            <input class="input-checkbox__input" id="color-gray" name="color-gray" type="checkbox">
+            <label class="input-checkbox__title" for="color-gray">Серый</label>
+          </div>
+
+          <div class="input-checkbox">
+            <input class="input-checkbox__input" id="color-tiffani" name="color-tiffani" type="checkbox">
+            <label class="input-checkbox__title" for="color-tiffani">"Тиффани"</label>
+          </div>
+
+          <div class="input-checkbox">
+            <input class="input-checkbox__input" id="color-black" name="color-black" type="checkbox">
+            <label class="input-checkbox__title" for="color-black">Черный</label>
+          </div>
+
+          <div class="input-checkbox">
+            <input class="input-checkbox__input" id="color-pink" name="color-pink" type="checkbox">
+            <label class="input-checkbox__title" for="color-pink">Розовый</label>
+          </div>
+
+          <div class="input-checkbox">
+            <input class="input-checkbox__input" id="color-orange" name="color-orange" type="checkbox">
+            <label class="input-checkbox__title" for="color-orange">Оранжевый</label>
+          </div>
+
+        </div>
       </div>
 
-      <div class="input-text-area">
-        <label class="input-text__title form__label" for="comment">Доп</label>
-        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      <div class="form__group">
+        <span class="form__group-label">ФИО</span>
+
+        <div class="form__inputs-group">
+          <div class="input-text">
+            <label class="input-text__title" for="first-name">Имя</label>
+            <input class="input-text__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+          </div>
+
+          <div class="input-text">
+            <label class="input-text__title" for="last-name">Фамилия</label>
+            <input class="input-text__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
+          </div>
+
+          <div class="input-text">
+            <label class="input-text__title" for="fathers-name">Отчество</label>
+            <input class="input-text__input" type="text" id="fathers-name" name="fathers-name" placeholder="Отчество, если пожелаете">
+          </div>
+        </div>
       </div>
 
-      <p class="form__hint">*Поля обязательны для заполнения</p>
-      <button class="button">Оформить заказ</button>
+      <div class="form__group form__group--bg-dark">
+        <span class="form__group-label">Тел</span>
+
+        <div class="form__inputs-group">
+          <div class="input-text">
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
+            <img src="http://placehold.it/25x25" alt="Иконка - телефон" class="input-text__icon input-text__icon--phone" width="25" height="25">
+          </div>
+        </div>
+      </div>
+
+      <div class="form__group form__group--bg-dark">
+        <span class="form__group-label">E-mail</span>
+
+        <div class="form__inputs-group">
+          <div class="input-text">
+            <label class="visually-hidden" for="email">E-mail</label>
+            <input class="input-text__input" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+            <img src="http://placehold.it/30x20" alt="Иконка - письмо" class="input-text__icon input-text__icon--letter" width="30" height="20">
+          </div>
+        </div>
+      </div>
+
+      <div class="form__group">
+        <span class="form__group-label">Доп</span>
+
+        <div class="form__inputs-group">
+          <div class="input-text-area">
+            <label class="visually-hidden" for="comment">Дополнительная информация</label>
+            <textarea class="input-text-area__input" name="comment" id="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__button-wrapper">
+        <p class="form__hint">*Поля обязательны для заполнения</p>
+        <button class="button">Оформить заказ</button>
+      </div>
     </form>
 
     <footer class="footer">
-      <ul class="footer__social-list">
-        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/20x20" alt="instagram" width="20" height="20"></a></li>
-        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/15x30" alt="facebook" width="15" height="30"></a></li>
-        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/25x20" alt="twitter" width="25" height="20"></a></li>
-      </ul>
+      <div class="footer__content-wrapper center-layout">
+        <div class="footer__logo">
+          <img src="http://placehold.it/100x35" alt="Мишка" class="footer__logo-icon" width="100" height="35">
+        </div>
 
-      <div class="footer__dividing-line"></div>
+        <ul class="footer__social-list">
+          <li class="footer__social-item"><a href="#"><img src="http://placehold.it/20x20" alt="instagram" width="20" height="20"></a></li>
+          <li class="footer__social-item"><a href="#"><img src="http://placehold.it/15x30" alt="facebook" width="15" height="30"></a></li>
+          <li class="footer__social-item"><a href="#"><img src="http://placehold.it/25x20" alt="twitter" width="25" height="20"></a></li>
+        </ul>
 
-      <div class="footer__created-by">
-        <span class="footer__created-by--title">Разработано</span>
-        <img src="http://placehold.it/25x35" alt="Разработано в HTML Academy" class="created-by-logo"  width="25" height="35">
+        <div class="footer__created-by">
+          <span class="footer__created-by-title">Разработано</span>
+          <img src="http://placehold.it/27x35" alt="Разработано в HTML Academy" class="footer__created-by-logo"  width="27" height="35">
+        </div>
       </div>
     </footer>
   </body>

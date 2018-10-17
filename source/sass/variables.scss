@@ -1,6 +1,16 @@
 // COLORS
-$cGray: #f1f1f1;
-$cDarkGray: #444444;
-$cLightGreen: #64d1bc;
-$cGreen: #57c3b3;
-$cDarkGreen: #3bb09d;
+$base-light: #64d1bc;
+$base-medium: #57c3b3;
+$base-dark: #3bb09d;
+$bg-dark: #f1f1f1;
+$bg-light: #f9f9f9;
+$character: #e5e5e5;
+
+$main-text: #000000;
+$alter-text: #444444;
+
+
+// DEVICE WIDTH
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1250px;

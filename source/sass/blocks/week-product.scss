@@ -1,3 +1,94 @@
-.week-product {
-  // week-product block
+@import "../variables";
+
+.week-product__titles-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-product__title {
+  margin: 0;
+}
+
+.week-product__sub-title {
+  color: $base-light;
+  font-weight: bold;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.week-product__about {
+  margin-top: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .week-product {
+    position: relative;
+  }
+
+  .week-product__titles-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+
+  .week-product__sub-title {
+    width: 175px;
+    padding-right: 27px;
+    padding-left: 70px;
+    text-align: center;
+  }
+
+  .week-product__info-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .week-product__text-info {
+    width: 290px;
+    padding-bottom: 110px;
+  }
+
+  .week-product__order-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  // Временно зафиксируем размеры картинки
+  .week-product__image {
+    width: 334px;
+    height: 405px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .week-product__titles-wrapper {
+    position: absolute;
+    top: 135px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .week-product__sub-title {
+    padding-right: 55px;
+    padding-left: 45px;
+  }
+
+  .week-product__info-wrapper {
+    padding-left: 175px;
+  }
+
+  .week-product__text-info {
+    padding-top: 170px;
+  }
+
+  .week-product__order-wrapper {
+    left: 175px;
+  }
+
+  // Временно зафиксируем размеры картинки
+  .week-product__image {
+    width: 525px;
+    height: 640px;
+  }
 }

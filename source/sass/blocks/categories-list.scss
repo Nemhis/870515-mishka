@@ -1,3 +1,43 @@
+@import "../variables";
+
 .categories-list {
-  // categories-list
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.categories-list__item {
+  min-height: 100px;
+  padding: 0 30px;
+  background-color: $base-light;
+
+  &--dark {
+    background-color: $base-medium;
+  }
+}
+
+.categories-list__link {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+  .categories-list {
+    width: 668px;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .categories-list__item {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories-list {
+    width: 1050px;
+  }
 }

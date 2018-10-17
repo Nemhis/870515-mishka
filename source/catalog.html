@@ -3,30 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <img src="http://placehold.it/75x35" alt="Мишка" class="header__logo-icon" width="75" height="35">
-      </div>
-
       <nav class="main-nav header__menu">
+        <div class="main-nav__menu-layout"></div>
+
         <button class="main-nav__list-toggle">Открыть</button>
+
+        <!-- TODO: расставить ссылки -->
         <ul class="main-nav__list">
-          <li class="main-nav__list-item">Пункт 1</li>
-          <li class="main-nav__list-item">Пункт 2</li>
-          <li class="main-nav__list-item">Пункт 3</li>
+          <li class="main-nav__list-item main-nav__list-item--logo">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--catalog">
+            <a href="#" class="main-nav__link">
+              <span>Каталог товаров</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--order">
+            <a href="#" class="main-nav__link">
+              <span>Вязание на заказ</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--search">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/20x20" alt="Поиск по сайту" class="main-nav__search-icon">
+              <span class=" main-nav__search-title">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--cart">
+            <a href="#" class="main-nav__link">
+              <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
         </ul>
       </nav>
-
       <div class="header__title-wrapper">
         <h1 class="header__title">Каталог товаров</h1>
       </div>
     </header>
 
     <main>
-      <section class="products">
+      <section class="products center-layout">
         <h2 class="visually-hidden">Список товаров</h2>
 
         <ul class="products__products-list">
@@ -71,34 +95,41 @@
         </ul>
       </section>
 
-      <section class="production-process">
+      <section class="production-process center-layout">
+        <!-- TODO: не знаю как правильно вынести тайтл на правую сторону в десктопной версии-->
         <div class="production-process__title-wrapper">
           <img src="http://placehold.it/30x20" alt="Иконка - процесс производства" class="production-process__title-icon" width="30" height="20">
-          <h2>Процесс производства</h2>
+          <h2 class="production-process__title">Процесс производства</h2>
         </div>
 
         <div class="production-process__video-container"></div>
 
-        <p class="production-process__description">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары
-        </p>
+        <div class="production-process__order-wrapper">
+          <p class="production-process__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары
+          </p>
 
-        <a href="#" class="button">Сделать заказ</a>
+          <a href="#" class="production-process__button button">Сделать заказ</a>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <ul class="footer__social-list">
-        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/20x20" alt="instagram" width="20" height="20"></a></li>
-        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/15x30" alt="facebook" width="15" height="30"></a></li>
-        <li><a href="#" class="footer__social-link"><img src="http://placehold.it/25x20" alt="twitter" width="25" height="20"></a></li>
-      </ul>
+      <div class="footer__content-wrapper center-layout">
+        <div class="footer__logo">
+          <img src="http://placehold.it/100x35" alt="Мишка" class="footer__logo-icon" width="100" height="35">
+        </div>
 
-      <div class="footer__dividing-line"></div>
+        <ul class="footer__social-list">
+          <li class="footer__social-item"><a href="#"><img src="http://placehold.it/20x20" alt="instagram" width="20" height="20"></a></li>
+          <li class="footer__social-item"><a href="#"><img src="http://placehold.it/15x30" alt="facebook" width="15" height="30"></a></li>
+          <li class="footer__social-item"><a href="#"><img src="http://placehold.it/25x20" alt="twitter" width="25" height="20"></a></li>
+        </ul>
 
-      <div class="footer__created-by">
-        <span class="footer__created-by--title">Разработано</span>
-        <img src="http://placehold.it/25x35" alt="Разработано в HTML Academy" class="created-by-logo"  width="25" height="35">
+        <div class="footer__created-by">
+          <span class="footer__created-by-title">Разработано</span>
+          <img src="http://placehold.it/27x35" alt="Разработано в HTML Academy" class="footer__created-by-logo"  width="27" height="35">
+        </div>
       </div>
     </footer>
   </body>

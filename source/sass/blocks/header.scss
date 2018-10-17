@@ -4,6 +4,7 @@
   min-height: 255px;
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: $bg-dark;
 
   &--theme-hero {
@@ -23,14 +24,32 @@
   margin-top: auto;
 }
 
+.header__promo-list,
+.header__delivery {
+  // TODO: стоит ли их скрывать полностью? возможно стоит оставить для читалок, а скрыть визуально
+  display: none;
+  font-size: 15px;
+}
+
+.header__promo-list {
+  font-weight: bold;
+}
+
 @media (min-width: $tablet-width) {
   .header {
     min-height: 230px;
 
     &--theme-hero {
-      min-height: 715px;
-      background: url("../img/hero-tablet@1x.jpg") 50% 0 no-repeat $bg-light;
+      min-height: 832px;
+      background: url("../img/hero-tablet@1x.jpg") 50% 100% no-repeat $bg-light;
     }
+  }
+
+  .header__delivery {
+    display: inline;
+    top: 110px;
+    right: 0;
+    position: absolute;
   }
 
   .header__title {

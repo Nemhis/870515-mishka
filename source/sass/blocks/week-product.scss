@@ -7,6 +7,7 @@
 .week-product__titles-wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .week-product__title {
@@ -16,12 +17,64 @@
 .week-product__sub-title {
   color: $base-light;
   font-weight: bold;
-  line-height: 1.2em;
+  font-size: 17px;
+  line-height: 17px;
   text-transform: uppercase;
 }
 
 .week-product__about {
   margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.week-product__info-list {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.week-product__info-list,
+.week-product__about {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.week-product__info-item {
+  display: table-row;
+  border-bottom: 1px solid $character;
+}
+
+.week-product__info-value,
+.week-product__info-name {
+  display: table-cell;
+  padding: 10px 0;
+}
+
+.week-product__price-wrapper {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.week-product__info-wrapper,
+.week-product__order-wrapper {
+  color: $alter-text;
+}
+
+.week-product__info-wrapper {
+  margin-bottom: 27px;
+}
+
+.week-product__order-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-product__price-wrapper {
+  text-align: center;
+  margin-bottom: 27px;
 }
 
 @media (min-width: $tablet-width) {
@@ -49,7 +102,6 @@
   }
 
   .week-product__text-info {
-    width: 290px;
     padding-bottom: 110px;
   }
 
@@ -57,6 +109,21 @@
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+
+  .week-product__text-info,
+  .week-product__order-wrapper {
+    width: 290px;
+  }
+
+  .week-product__about {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .week-product__price-title {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   // Временно зафиксируем размеры картинки
@@ -73,7 +140,7 @@
 
   .week-product__titles-wrapper {
     position: absolute;
-    top: 135px;
+    top: 60px;
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
@@ -93,6 +160,10 @@
 
   .week-product__order-wrapper {
     left: 175px;
+  }
+
+  .week-product__info-list {
+    font-size: 17px;
   }
 
   // Временно зафиксируем размеры картинки

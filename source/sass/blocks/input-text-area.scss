@@ -1,7 +1,35 @@
+@import "../variables";
+
 .input-text-area {
+  color: $alter-text;
   // input-text-area
 }
 
 .input-text-area__input {
   width: 100%;
+  border: 2px solid $alter-text;
+  padding: 16px;
+  outline: none;
+
+  &::placeholder {
+    color: #d2d2d2;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $base-light;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .input-text-area__input {
+    width: 500px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .input-text-area__input {
+    width: 700px;
+  }
 }

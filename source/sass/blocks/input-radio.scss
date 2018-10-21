@@ -1,3 +1,72 @@
+@import "../variables";
+
 .input-radio {
-  // input-radio block
+  //input-radio block
+}
+
+.input-radio__title {
+  display: inline-block;
+  min-height: 40px;
+  position: relative;
+  cursor: pointer;
+  padding-left: 60px;
+  padding-top: 10px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transition: border-color 0.3s;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $base-light;
+  }
+
+  &:active::before {
+    border-color: $character;
+  }
+}
+
+.input-radio__input {
+  display: none;
+}
+
+.input-radio__input:checked ~ .input-radio__title::before {
+  content: "\2022";
+  color: $base-light;
+  font-size: 60px;
+  text-align: center;
+  line-height: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .input-radio__title {
+    min-height: 52px;
+    padding-left: 82px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .input-radio__title::before {
+    width: 52px;
+    height: 52px;
+  }
+
+  .input-radio__input:checked ~ .input-radio__title::before {
+    font-size: 80px;
+    line-height: 40px;
+  }
 }

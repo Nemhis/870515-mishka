@@ -8,4 +8,15 @@
   color: $alter-text;
   font-weight: bold;
   text-transform: uppercase;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $alter-text;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: $alter-text;
+    color: #8d8d8d;
+  }
 }

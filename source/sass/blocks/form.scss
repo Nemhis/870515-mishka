@@ -7,10 +7,28 @@
 .form__group {
   display: flex;
   flex-direction: column;
-  padding: 25px 0;
+  position: relative;
+  border-top: 2px solid $base-light;
+  margin-top: 12px;
+
+  // TODO: как тут правильно отступы натсроить ?
+  padding-top: 30px;
+}
+
+.form__row {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__group-label {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  padding-right: 25px;
+  background-color: #ffffff;
   color: $base-light;
   font-weight: bold;
   text-transform: uppercase;
@@ -39,6 +57,7 @@
 }
 
 .form__text {
+  margin-bottom: 25px;
   font-size: 13px;
   line-height: 24px;
   color: $alter-text;
@@ -57,12 +76,17 @@
 
   .form__group {
     flex-direction: row;
-    padding: 50px 0;
+    border-top: none;
+    margin-top: 0;
   }
 
   .form__group-label {
     width: 167px;
     flex-shrink: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    background-color: transparent;
   }
 
   .form__button-wrapper {

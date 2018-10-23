@@ -1,7 +1,7 @@
 @import "../variables";
 
 .products {
-  // products block
+  margin-bottom: 30px;
 }
 
 .products__products-list {
@@ -21,12 +21,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .products {
+    margin-bottom: 53px;
+  }
+
   .products__product-card {
     margin-bottom: 55px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .products {
+    margin-bottom: 60px;
+  }
+
   .products__products-list {
     flex-direction: row;
   }

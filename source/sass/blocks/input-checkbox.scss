@@ -1,3 +1,73 @@
+@import "../variables";
+
 .input-checkbox {
   // input-checkbox block
+}
+
+.input-checkbox__title {
+  display: inline-block;
+  min-height: 40px;
+  position: relative;
+  cursor: pointer;
+  padding-left: 60px;
+  padding-top: 10px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transition: border-color 0.3s;
+    border: 1px solid #000000;
+  }
+
+  &:hover::before {
+    border-color: $base-light;
+  }
+
+  &:active::before {
+    border-color: $character;
+  }
+}
+
+.input-checkbox__input {
+  display: none;
+}
+
+.input-checkbox__input:checked ~ .input-checkbox__title::before {
+  background-image: url("../img/icon-tick.svg");
+  background-size: 21px 17px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: $tablet-width) {
+  .input-checkbox {
+    width: 240px;
+  }
+
+  .input-checkbox__title {
+    min-height: 52px;
+    padding-left: 82px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .input-checkbox__title::before {
+    width: 52px;
+    height: 52px;
+  }
+
+  .input-checkbox__input:checked ~ .input-checkbox__title::before {
+    background-size: 33px 22px;
+  }
 }

@@ -8,25 +8,24 @@
   </head>
   <body>
     <header class="header">
-      <nav class="main-nav header__menu">
-        <div class="main-nav__menu-layout"></div>
+      <nav class="header__menu main-nav main-nav--nojs">
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-        <button class="main-nav__list-toggle">Открыть</button>
-
-        <!-- TODO: расставить ссылки -->
-        <ul class="main-nav__list">
+        <ul class="main-nav__list center-layout">
           <li class="main-nav__list-item main-nav__list-item--logo">
-            <a href="#" class="main-nav__link">
+            <a href="/" class="main-nav__link">
               <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
             </a>
           </li>
           <li class="main-nav__list-item main-nav__list-item--catalog">
-            <a href="#" class="main-nav__link">
+            <a href="catalog.html" class="main-nav__link">
               <span>Каталог товаров</span>
             </a>
           </li>
           <li class="main-nav__list-item main-nav__list-item--order">
-            <a href="#" class="main-nav__link">
+            <a href="form.html" class="main-nav__link">
               <span>Вязание на заказ</span>
             </a>
           </li>
@@ -38,12 +37,22 @@
           </li>
           <li class="main-nav__list-item main-nav__list-item--cart">
             <a href="#" class="main-nav__link">
-              <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+              <img src="http://placehold.it/20x20" alt="Корзина" class="main-nav__cart-icon">
               <span>Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
       </nav>
+
+      <div class="header_promo-container center-layout">
+        <ul class="header__promo-list">
+          <li class="header__promo-list-item">Новы поступления</li>
+          <li class="header__promo-list-item">Распродажа</li>
+        </ul>
+
+        <span class="header__delivery">Бесплатная доставка по России</span>
+      </div>
+
       <div class="header__title-wrapper">
         <h1 class="header__title">Каталог товаров</h1>
       </div>
@@ -56,57 +65,68 @@
         <ul class="products__products-list">
           <li class="products__product-card product-card">
             <img src="http://placehold.it/260x195" alt="Зачик-попрыгайчик" class="product-card__preview-image" width="260" height="195">
-            <p class="product-card__name">Зайчик-попрыгайчик</p>
-            <p class="product-card__description">Рост 30&nbsp;см, вес 200&nbsp;г</p>
-            <div class="product-card__dividing-line"></div>
-            <div class="product-card__wrapper">
-              <span class="product-card__price">1&nbsp;200&nbsp;руб.</span>
-              <a href="#" class="products-card__basket-link">
-                <img src="http://placehold.it/20x18" alt="Корзина" class="product-card__basket-icon" width="20" height="18">
-              </a>
+
+            <div class="product-card__info-container">
+              <div class="product-card__name">Зайчик-попрыгайчик</div>
+              <p class="product-card__description">Рост 30&nbsp;см, вес 200&nbsp;г</p>
+              <div class="product-card__dividing-line"></div>
+              <div class="product-card__order-wrapper">
+                <span class="product-card__price">1&nbsp;200&nbsp;руб.</span>
+                <a href="#" class="products-card__basket-link">
+                  <img src="http://placehold.it/20x18" alt="Корзина" class="product-card__basket-icon" width="20" height="18">
+                </a>
+              </div>
             </div>
           </li>
 
           <li class="products__product-card product-card">
             <img src="http://placehold.it/260x195" alt="Корзинка для белья" class="product-card__preview-image" width="260" height="195">
-            <p class="product-card__name">Корзинка для белья</p>
-            <p class="product-card__description">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
-            <div class="product-card__dividing-line"></div>
-            <div class="product-card__wrapper">
-              <span class="product-card__price">690&nbsp;руб.</span>
-              <a href="#" class="products-card__basket-link">
-                <img src="http://placehold.it/20x18" alt="Корзина" class="product-card__basket-icon"  width="20" height="18">
-              </a>
+
+            <div class="product-card__info-container">
+              <div class="product-card__name">Корзинка для белья</div>
+              <p class="product-card__description">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
+              <div class="product-card__dividing-line"></div>
+              <div class="product-card__order-wrapper">
+                <span class="product-card__price">690&nbsp;руб.</span>
+                <a href="#" class="products-card__basket-link">
+                  <img src="http://placehold.it/20x18" alt="Корзина" class="product-card__basket-icon"  width="20" height="18">
+                </a>
+            </div>
             </div>
           </li>
 
           <li class="products__product-card product-card">
             <img src="http://placehold.it/260x195" alt="Зачик-попрыгайчик" class="product-card__preview-image" width="260" height="195">
-            <p class="product-card__name">Зайчик-попрыгайчик</p>
-            <p class="product-card__description">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
-            <div class="product-card__dividing-line"></div>
-            <div class="product-card__wrapper">
-              <span class="product-card__price">1&nbsp;500&nbsp;руб.</span>
-              <a href="#" class="products-card__basket-link">
-                <img src="http://placehold.it/20x18" alt="Корзина" class="product-card__basket-icon"  width="20" height="18">
-              </a>
+
+            <div class="product-card__info-container">
+              <div class="product-card__name">Большая корзинка для игрушек</div>
+              <p class="product-card__description">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
+              <div class="product-card__dividing-line"></div>
+              <div class="product-card__order-wrapper">
+                <span class="product-card__price">1&nbsp;500&nbsp;руб.</span>
+                <a href="#" class="products-card__basket-link">
+                  <img src="http://placehold.it/20x18" alt="Корзина" class="product-card__basket-icon"  width="20" height="18">
+                </a>
+              </div>
             </div>
           </li>
         </ul>
       </section>
 
       <section class="production-process center-layout">
-        <!-- TODO: не знаю как правильно вынести тайтл на правую сторону в десктопной версии-->
-        <div class="production-process__title-wrapper">
-          <img src="http://placehold.it/30x20" alt="Иконка - процесс производства" class="production-process__title-icon" width="30" height="20">
-          <h2 class="production-process__title">Процесс производства</h2>
-        </div>
+        <div class="production-process__container">
+          <div class="production-process__title-wrapper">
+            <img src="http://placehold.it/30x20" alt="Иконка - процесс производства" class="production-process__title-icon" width="30" height="20">
+            <h2 class="production-process__title">Процесс производства</h2>
+          </div>
 
-        <div class="production-process__video-container"></div>
+          <div class="production-process__video-container">
+          </div>
+        </div>
 
         <div class="production-process__order-wrapper">
           <p class="production-process__description">
-            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
           </p>
 
           <a href="#" class="production-process__button button">Сделать заказ</a>
@@ -131,6 +151,8 @@
           <img src="http://placehold.it/27x35" alt="Разработано в HTML Academy" class="footer__created-by-logo"  width="27" height="35">
         </div>
       </div>
+
+      <script src="js/application.js"></script>
     </footer>
   </body>
 </html>

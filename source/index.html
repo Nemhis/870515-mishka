@@ -8,24 +8,24 @@
   </head>
   <body>
     <header class="header header--theme-hero">
+      <nav class="header__menu main-nav main-nav--nojs">
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-      <nav class="main-nav header__menu">
-        <button class="main-nav__list-toggle">Открыть</button>
-
-        <!-- TODO: расставить ссылки -->
         <ul class="main-nav__list center-layout">
           <li class="main-nav__list-item main-nav__list-item--logo">
-            <a href="#" class="main-nav__link">
+            <a href="/" class="main-nav__link">
               <img src="http://placehold.it/90x35" alt="Мишка" class="header__logo-icon" width="90" height="35">
             </a>
           </li>
           <li class="main-nav__list-item main-nav__list-item--catalog">
-            <a href="#" class="main-nav__link">
+            <a href="catalog.html" class="main-nav__link">
               <span>Каталог товаров</span>
             </a>
           </li>
           <li class="main-nav__list-item main-nav__list-item--order">
-            <a href="#" class="main-nav__link">
+            <a href="form.html" class="main-nav__link">
               <span>Вязание на заказ</span>
             </a>
           </li>
@@ -37,7 +37,7 @@
           </li>
           <li class="main-nav__list-item main-nav__list-item--cart">
             <a href="#" class="main-nav__link">
-              <img src="http://placehold.it/20x20" alt="Корзина" class="man-nav__cart-icon">
+              <img src="http://placehold.it/20x20" alt="Корзина" class="main-nav__cart-icon">
               <span>Корзина: пока пуста</span>
             </a>
           </li>
@@ -46,8 +46,8 @@
 
       <div class="header_promo-container center-layout">
         <ul class="header__promo-list">
-          <li>Новы поступления</li>
-          <li>Распродажа</li>
+          <li class="header__promo-list-item">Новы поступления</li>
+          <li class="header__promo-list-item">Распродажа</li>
         </ul>
 
         <span class="header__delivery">Бесплатная доставка по России</span>
@@ -61,16 +61,14 @@
           <li class="categories-list__item">
             <a href="#" class="categories-list__link">
               <span class="categories-list__title">Предметы интерьера</span>
-              <img src="http://placehold.it/40x60" alt="Предметы интерьера" class="categories-list__icon" height="60"
-                   width="40">
+              <img src="http://placehold.it/40x60" alt="Предметы интерьера" class="categories-list__icon" height="60" width="40">
             </a>
           </li>
 
           <li class="categories-list__item categories-list__item--dark">
             <a href="#" class="categories-list__link">
               <span class="categories-list__title">Детские игрушки</span>
-              <img src="http://placehold.it/60x60" alt="Детские игрушки" class="categories-list__icon" height="60"
-                   width="60">
+              <img src="http://placehold.it/60x60" alt="Детские игрушки" class="categories-list__icon" height="60" width="60">
             </a>
           </li>
         </ul>
@@ -79,7 +77,7 @@
     <main>
       <section class="week-product center-layout">
         <div class="week-product__titles-wrapper">
-          <h2 class="week-product__title">Вязаные корзинки</h2>
+          <h2 class="week-product__title section-title">Вязаные корзинки</h2>
           <span class="week-product__sub-title">товар недели</span>
         </div>
 
@@ -161,7 +159,7 @@
 
       <section class="reviews">
         <div class="reviews__content-wrapper center-layout">
-          <h2 class="reviews__title">Отзывы</h2>
+          <h2 class="reviews__title section-title">Отзывы</h2>
 
           <ul class="reviews__reviews-list">
             <li class="reviews__review">
@@ -178,8 +176,13 @@
           </ul>
 
           <div class="reviews__reviews-controls-wrapper">
-            <button class="reviews__prev-review"></button>
-            <button class="reviews__next-review"></button>
+            <button class="reviews__prev-review">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+
+            <button class="reviews__next-review">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
           </div>
 
           <a href="#" class="reviews__button button">Написать</a>
@@ -189,7 +192,7 @@
       <div class="wavy-line"></div>
 
       <section class="contacts">
-        <div class="center-layout">
+        <div class="contacts__title-container center-layout">
           <div class="contacts__title-wrapper">
             <h2 class="contacts__title">Контакты</h2>
             <div class="contacts__flag-icon-wrapper">
@@ -200,19 +203,21 @@
 
         <div class="contacts__contacts-wrapper">
           <ul class="contacts__list center-layout">
-            <li>
-              <span class="contacts__contact-name">e-mail</span>
+            <li class="contacts__lit-item">
+              <span class="contacts__contact-name">e-mail:</span>
               <span class="contacts__contacts-value">info@mimimishkashop.ru</span>
             </li>
-            <li>
-              <span class="contacts__contact-name">адрес</span>
-              <span class="contacts__contacts-value">г. Санкт-Петербург ул.Большая Конюшенная, д. 19/8, офис 101</span>
+            <li class="contacts__lit-item">
+              <span class="contacts__contact-name">адрес:</span>
+              <span class="contacts__contacts-value">г. Санкт-Петербург,<br/>ул.Большая Конюшенная,<br/>д. 19/8, офис 101</span>
             </li>
           </ul>
 
           <div class="contacts__map-wrapper"></div>
 
-          <a href="#" class="contacts__button button">Напишите нам</a>
+          <div class="contacts__button-wrapper center-layout">
+            <a href="#" class="contacts__button button">Напишите нам</a>
+          </div>
         </div>
       </section>
     </main>
@@ -234,6 +239,8 @@
           <img src="http://placehold.it/27x35" alt="Разработано в HTML Academy" class="footer__created-by-logo"  width="27" height="35">
         </div>
       </div>
+
+      <script src="js/application.js"></script>
     </footer>
   </body>
 </html>

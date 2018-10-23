@@ -3,10 +3,17 @@
 .wavy-line {
   height: 23px;
   width: 100%;
+  margin-bottom: 35px;
   background: url("../img/bg-zigzag-line.svg") 100% 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 1050px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
   }
 }

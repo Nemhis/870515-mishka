@@ -1,38 +1,111 @@
 @import "../variables";
 
 .reviews {
-  // reviews block
+  margin-bottom: 45px;
 }
 
 .reviews__title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .reviews__reviews-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 35px;
   list-style: none;
 }
 
 .reviews__review-text {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 38px;
+  color: $alter-text;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.reviews__review-author-name {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.reviews__review-author-nick {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.reviews__reviews-controls-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+
+  // временно
+  background-color: #64d1bc;
+}
+
+.reviews__prev-review,
+.reviews__next-review {
+  height: 50px;
+  flex-grow: 1;
+  border: 1px solid $character;
+  background-color: transparent;
+}
+
+.reviews__next-review {
+  border-left: none;
+}
+
+.reviews__button {
+  width: 100%;
+}
+
+.reviews__review {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: $tablet-width) {
+  .reviews {
+    margin-bottom: 65px;
+  }
+
+  .reviews__title {
+    margin-bottom: 65px;
+  }
+
   .reviews__content-wrapper {
+    padding-top: 80px;
+    padding-bottom: 50px;
     position: relative;
   }
 
-  .reviews__button {
+  .reviews__reviews-list {
+    margin-bottom: 0;
+  }
+
+  .reviews__review-text {
+    margin-bottom: 65px;
+    font-size: 17px;
+  }
+
+  .reviews__button,
+  .reviews__reviews-controls-wrapper {
+    width: 175px;
     position: absolute;
-    top: 0;
     right: 0;
   }
 
+  .reviews__button {
+    top: 80px;
+  }
+
   .reviews__reviews-controls-wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 60px;
+    margin-bottom: 0;
+  }
+
+  .reviews__prev-review,
+  .reviews__next-review {
+    border: none;
   }
 }
 
@@ -40,5 +113,12 @@
   .reviews__content-wrapper {
     padding-left: 175px;
   }
-}
 
+  .reviews__title {
+    margin-bottom: 60px;
+  }
+
+  .reviews__review-text {
+    margin-bottom: 50px;
+  }
+}

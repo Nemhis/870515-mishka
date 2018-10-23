@@ -1,20 +1,8 @@
 @import "../variables";
 
-// TODO: не получается отцентровать блок навигации в десктопной версии
 .main-nav {
+  min-height: 80px;
   background: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 23%);
-}
-
-// TODO: убрать
-.main-nav__menu-layout {
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid $character;
-}
-
-.main-nav__menu-layout,
-.main-nav__list-item {
-  height: 80px;
 }
 
 .main-nav__list {
@@ -27,10 +15,15 @@
 }
 
 .main-nav__list-item {
+  height: 80px;
   order: 5;
-  padding: 10px 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 75px;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid $character;
 }
 
 .main-nav__link {
@@ -39,11 +32,113 @@
 }
 
 .main-nav__list-item--logo {
-  text-align: center;
+  justify-content: center;
+  padding-left: 0;
 }
 
-.main-nav__list-toggle {
-  display: none;
+.main-nav__list-item--search,
+.main-nav__list-item--cart {
+  padding-left: 30px;
+}
+
+.main-nav__cart-icon,
+.main-nav__search-icon {
+  margin-right: 20px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    display: block;
+    width: 79px;
+    height: 79px;
+
+    background-color: #ffffff;
+
+    cursor: pointer;
+    border: none;
+
+    &:hover,
+    &:active {
+      background-color: #ffffff;
+    }
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    width: 22px;
+    height: 2px;
+
+    background-color: #000000;
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    right: 0;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 38px;
+      right: 25px;
+
+      width: 22px;
+      height: 2px;
+
+      background-color: #000000;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--closed .main-nav__list-item {
+    display: none;
+
+    &--logo {
+      display: flex;
+    }
+  }
+
+  .main-nav--opened .main-nav__list {
+    position: absolute;
+    top: 0;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__list-item {
+    display: flex;
+  }
+
+  .main-nav--nojs .main-nav__list-item--logo {
+    text-align: center;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -56,33 +151,77 @@
     height: 90px;
   }
 
+  .main-nav__list-item {
+    background-color: initial;
+    border-bottom: none;
+  }
+
   .main-nav__list {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 668px;
+    margin: 0 auto;
   }
 
   .main-nav__list-item--logo {
-    width: 320px;
+    width: 220px;
+    justify-content: flex-start;
     text-align: initial;
     margin-right: auto;
+    padding-left: 0;
   }
 
   .main-nav__list-item--catalog,
   .main-nav__list-item--order {
     padding-top: 20px;
+    padding-left: 0;
+    margin-right: 35px;
     order: 6;
     align-items: flex-start;
   }
 
+  .main-nav__list-item--cart {
+    width: 265px;
+    padding-right: 0;
+    justify-content: flex-end;
+  }
+
+  .main-nav__list-item--search {
+    width: 83px;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .main-nav__list-item--search,
+  .main-nav__list-item--cart {
+    border-left: 1px solid $character;
+  }
+
+  .man-nav__cart-icon {
+    margin-right: 30px;
+  }
+
+  .main-nav__search-icon {
+    margin-right: 0;
+  }
+
   .main-nav__search-title {
+    display: none;
+  }
+
+  .main-nav__toggle {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    background: none;
+    background-color: #ffffff;
     border-bottom: 1px solid $character;
+  }
+
+  .main-nav__list {
+    width: 1050px;
   }
 
   .main-nav__list-item--catalog,
@@ -90,5 +229,9 @@
     order: 4;
     align-items: center;
   }
-}
 
+  .main-nav__list-item--logo {
+    margin: 0 auto;
+    width: auto;
+  }
+}

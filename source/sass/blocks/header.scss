@@ -10,7 +10,15 @@
 
   &--theme-hero {
     min-height: 560px;
-    background: url("../img/hero-mobile@1x.jpg") 50% 0 no-repeat $bg-light;
+    background-color: $bg-light;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-position: 50% 35%;
+    background-size: 575px auto;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+    }
   }
 }
 
@@ -58,8 +66,15 @@
 
     &--theme-hero {
       min-height: 832px;
-      background: url("../img/hero-tablet@1x.jpg") 50% 100% no-repeat $bg-light;
       margin-bottom: 55px;
+      background-image: url("../img/hero-tablet@1x.jpg");
+      background-position: 50% 100%;
+      background-size: 1150px auto;
+
+      @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+      }
 
       .header__title {
         padding-top: 100px;
@@ -93,8 +108,14 @@
     margin-bottom: 130px;
 
     &--theme-hero {
-      background: url("../img/hero-desktop@1x.jpg") 50% 100% no-repeat $bg-light;
       margin-bottom: 70px;
+      background-image: url("../img/hero-desktop@1x.jpg");
+      background-size: 1150px auto;
+
+      @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+      }
     }
   }
 

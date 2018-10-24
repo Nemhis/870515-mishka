@@ -68,6 +68,7 @@
       </p>
 
       <div>
+        <!-- TODO: form__group для каждой группы (user_field, colors) вынести в отдельную группу и отступы для каждой группы свой-->
         <div class="form__row form__group center-layout">
           <span class="form__group-label">Тип</span>
 
@@ -146,11 +147,13 @@
 
         <div class="form__row form__group-container form__group-container--dark">
           <div class="form__group center-layout">
-            <span class="form__group-label">Тел</span>
+            <!--TODO: убрать дублирование -->
+            <label class="form__group-label" for="phone">Телефон</label>
+            <!--<span class="form__group-label">Тел</span>-->
 
             <div class="form__inputs-group">
               <div class="input-text input-text--icon">
-                <label class="visually-hidden" for="phone">Телефон</label>
+
                 <input class="input-text__input" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} ([0-9]{3})-[0-9]{2}-[0-9]{2}" required>
 
                 <svg class="input-text__icon" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 25 25">

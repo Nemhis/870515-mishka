@@ -58,6 +58,20 @@
   color: #63d1bb;
 }
 
+.footer__logo-icon,
+.footer__social-icon {
+  color: #000000;
+
+  &:hover {
+    color: $base-hover;
+  }
+
+  &:active {
+    color: $base-hover;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .footer {
     height: 143px;

@@ -33,16 +33,29 @@
   display: flex;
   justify-content: center;
   padding-top: 24px;
+
+  &:hover .footer__created-by-logo {
+    color: $base-hover;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .footer__created-by-title {
   margin-right: 30px;
   font-size: 1.2em;
   font-weight: bold;
+  color: #000000;
 }
 
 .footer__logo {
   display: none;
+}
+
+.footer__created-by-logo {
+  color: #63d1bb;
 }
 
 @media (min-width: $tablet-width) {

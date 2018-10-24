@@ -2,7 +2,7 @@
 
 .main-nav {
   min-height: 80px;
-  background: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 23%);
+  background-image: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 23%);
 }
 
 .main-nav__list {
@@ -44,6 +44,11 @@
 .main-nav__cart-icon,
 .main-nav__search-icon {
   margin-right: 20px;
+}
+
+.main-nav__logo-icon {
+  width: 90px;
+  height: 35px;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -143,7 +148,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    background: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 51%);
+    background-image: linear-gradient(to bottom, #ffffff 90px, $character 2px, rgba(0, 0, 0, 0) 51%);
   }
 
   .main-nav__menu-layout,
@@ -212,10 +217,16 @@
   .main-nav__toggle {
     display: none;
   }
+
+  .main-nav__logo-icon {
+    width: 112px;
+    height: 46px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    background-image: none;
     background-color: #ffffff;
     border-bottom: 1px solid $character;
   }
@@ -233,5 +244,10 @@
   .main-nav__list-item--logo {
     margin: 0 auto;
     width: auto;
+  }
+
+  .main-nav__logo-icon {
+    width: 148px;
+    height: 72px;
   }
 }

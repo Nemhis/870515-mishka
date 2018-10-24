@@ -102,7 +102,11 @@
             </ul>
           </div>
 
-          <img src="http://placehold.it/260x320" alt="Товар недели" class="week-product__image" width="260" height="320">
+          <picture>
+            <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Товар недели - вязаная корзинка">
+          </picture>
         </div>
 
         <div class="week-product__order-wrapper">

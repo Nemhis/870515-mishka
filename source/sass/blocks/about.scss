@@ -18,6 +18,9 @@
 .about__list {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .about__list-item {
@@ -31,20 +34,12 @@
   }
 }
 
-.about__item-icon {
-  margin-bottom: 20px;
-}
-
 .about__item-icon path {
   fill: $base-lighest;
 }
 
-.about_items-group {
-  margin-bottom: 30px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+.about__icon-wrapper {
+  height: 40px;
 }
 
 @media (min-width: $tablet-width) {

@@ -53,11 +53,35 @@
 
   .about__list {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .about_items-group {
-    margin-bottom: 0;
-    margin-right: 30px;
+  .about__list-item {
+    width: 50%;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+    }
   }
 }
 
@@ -65,5 +89,9 @@
   .about {
     padding-left: 175px;
     margin-bottom: 88px;
+  }
+
+  .about__list-item {
+    width: 41%;
   }
 }

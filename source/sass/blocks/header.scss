@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
-      (min-resolution: $retina-dppx) {
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-mobile@2x.jpg");
     }
   }
@@ -38,7 +38,7 @@
 }
 
 .header__promo-list,
-.header__delivery {
+.header__delivery-link {
   // TODO: стоит ли их скрывать полностью? возможно стоит оставить для читалок, а скрыть визуально
   display: none;
   font-size: 15px;
@@ -73,7 +73,7 @@
       background-size: 1150px auto;
 
       @media (min-resolution: $retina-dpi),
-        (min-resolution: $retina-dppx) {
+      (min-resolution: $retina-dppx) {
         background-image: url("../img/hero-tablet@2x.jpg");
       }
 
@@ -96,11 +96,23 @@
     height: 1px;
   }
 
-  .header__delivery {
+  .header__delivery-link {
     display: inline;
     position: absolute;
     right: 0;
     top: -70px;
+    color: $alter-text;
+  }
+
+  .header__promo-list-item,
+  .header__delivery-link {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -114,7 +126,7 @@
       background-size: 1150px auto;
 
       @media (min-resolution: $retina-dpi),
-        (min-resolution: $retina-dppx) {
+      (min-resolution: $retina-dppx) {
         background-image: url("../img/hero-tablet@2x.jpg");
       }
     }
@@ -134,7 +146,7 @@
     padding-top: 20px;
   }
 
-  .header__delivery {
+  .header__delivery-link {
     position: relative;
     top: auto;
     right: auto;
@@ -142,6 +154,10 @@
 
   .header__promo-list {
     display: flex;
+  }
+
+  .header__promo-link {
+    color: #000000;
   }
 
   .header__promo-list-item {

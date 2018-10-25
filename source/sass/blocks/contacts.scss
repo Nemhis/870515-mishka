@@ -42,6 +42,19 @@
   flex-shrink: 0;
 }
 
+.contacts__contacts-value--mail {
+  color: $alter-text;
+  border-bottom: 1px solid $base-hover;
+
+  &:hover {
+    color: $base-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .contacts__map-wrapper {
   height: 460px;
   width: 100%;

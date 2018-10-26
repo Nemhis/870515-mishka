@@ -46,6 +46,8 @@
 .main-nav__list-item--logo .main-nav__link {
   justify-content: center;
   padding-left: 0;
+  padding-top: 15px;
+  padding-right: 2px;
 }
 
 .main-nav__list-item--search .main-nav__link,
@@ -111,14 +113,14 @@
     content: "";
 
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 32px;
+    left: 28px;
 
-    width: 22px;
+    width: 20px;
     height: 2px;
 
     background-color: #000000;
-    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
   }
 
   .main-nav--opened .main-nav__toggle {

@@ -16,14 +16,13 @@ $dark-icon-hover: #239f8e;
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin-bottom: 0;
   list-style: none;
 }
 
 .categories-list__item {
   display: flex;
   height: 103px;
-  padding-left: 30px;
+  padding-left: 29px;
   padding-right: 27px;
   background-color: $base-regular;
 
@@ -60,6 +59,16 @@ $dark-icon-hover: #239f8e;
   display: inline-block;
   width: 100px;
   margin-right: auto;
+  margin-bottom: 6px;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.categories-list__icon-wrapper {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -74,8 +83,8 @@ $dark-icon-hover: #239f8e;
 
   .categories-list__item {
     flex-grow: 1;
-    padding-left: 36px;
-    padding-right: 33px;
+    padding-left: 35px;
+    padding-right: 35px;
     height: 120px;
     transition: height 0.2s;
     transform-origin: bottom;
@@ -100,6 +109,16 @@ $dark-icon-hover: #239f8e;
         color: $dark-icon-hover;
       }
     }
+  }
+
+  .categories-list__title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .categories-list__icon-wrapper {
+    justify-content: flex-end;
   }
 }
 

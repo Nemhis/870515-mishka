@@ -1,19 +1,22 @@
 @import "../variables";
 
 .wavy-line {
-  height: 23px;
+  height: 8px;
   width: 100%;
-  margin-bottom: 35px;
-  background: url("../img/bg-zigzag-line.svg") 100% 100%;
+  margin-bottom: 26px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: cover;
 
   @media (min-width: $tablet-width) {
+    height: 16px;
     margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
+    height: 24px;
     width: 1050px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 70px;
+    margin-bottom: 58px;
   }
 }

@@ -234,6 +234,7 @@
 
     .main-nav__link {
       padding-right: 0;
+      padding-top: 5px;
       justify-content: flex-end;
     }
   }
@@ -266,12 +267,6 @@
     border-left: 1px solid $character;
     font-size: 17px;
     line-height: 24px;
-  }
-
-  .main-nav__list-item--cart {
-    .main-nav__link {
-      padding-top: 5px;
-    }
   }
 
   .main-nav__cart-icon {

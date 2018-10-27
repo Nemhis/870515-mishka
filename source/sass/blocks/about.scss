@@ -1,13 +1,7 @@
 @import "../variables";
 
-// TODO: для этого блока вопрос такой:
-// на макете каждый новый текстовый блок на том же уровне, что и текст в соседней колонке, как это добиться средствами css ?
-// картинки в высоту разные, поэтмоу отступ снизу ничего не даст, (
-// может обернуть картинку в обёртку и задать ей высоту, и от обёртки уже отступом отталкивать текст ?
-// в общем как то надо синхронизировать высоту, не знаю как ((
-
 .about {
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 }
 
 .about__title {
@@ -38,8 +32,15 @@
   fill: $base-lighest;
 }
 
+.about__item-text {
+  letter-spacing: 0.7px;
+}
+
 .about__icon-wrapper {
   height: 40px;
+  margin-bottom: 10px;
+  padding-left: 2px;
+  padding-top: 2px;
 }
 
 @media (min-width: $tablet-width) {
@@ -56,8 +57,19 @@
     flex-wrap: wrap;
   }
 
+  .about__item-text {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+
+  .about__icon-wrapper {
+    margin-bottom: 12px;
+  }
+
   .about__list-item {
     width: 50%;
+    margin-bottom: 60px;
 
     &:nth-child(1) {
       order: 1;
@@ -68,6 +80,7 @@
     }
 
     &:nth-child(3) {
+      margin-bottom: 0;
       order: 5;
     }
 
@@ -92,6 +105,6 @@
   }
 
   .about__list-item {
-    width: 41%;
+    width: 40%;
   }
 }

@@ -1,17 +1,17 @@
 @import "../variables";
 
 .week-product {
-  margin-bottom: 35px;
+  margin-bottom: 24px;
 }
 
 .week-product__titles-wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .week-product__title {
-  margin: 0;
+  margin: 0 0 6px;
 }
 
 .week-product__sub-title {
@@ -24,7 +24,7 @@
 
 .week-product__about {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .week-product__info-list {
@@ -50,7 +50,11 @@
 .week-product__info-value,
 .week-product__info-name {
   display: table-cell;
-  padding: 10px 0;
+  padding: 8px 0;
+}
+
+.week-product__info-name {
+  padding-right: 12px;
 }
 
 .week-product__price-wrapper {
@@ -66,7 +70,7 @@
 }
 
 .week-product__info-wrapper {
-  margin-bottom: 27px;
+  margin-bottom: 18px;
 }
 
 .week-product__order-wrapper {
@@ -77,19 +81,20 @@
 @media (min-width: $tablet-width) {
   .week-product {
     position: relative;
-    margin-bottom: 52px;
+    margin-bottom: 48px;
   }
 
   .week-product__titles-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 55px;
+    margin-bottom: 42px;
   }
 
   .week-product__sub-title {
     width: 175px;
     padding-right: 27px;
-    padding-left: 70px;
+    padding-left: 76px;
+    padding-top: 10px;
     text-align: center;
   }
 
@@ -105,39 +110,43 @@
   .week-product__order-wrapper {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 5px;
   }
 
   .week-product__text-info,
   .week-product__order-wrapper {
-    width: 290px;
+    width: 292px;
   }
 
   .week-product__about {
+    margin-bottom: 35px;
     font-size: 17px;
     line-height: 30px;
   }
 
-  .week-product__price-title {
+  .week-product__info-name {
+    padding-right: 0;
+  }
+
+  .week-product__price-wrapper {
+    margin-bottom: 33px;
     font-size: 20px;
     line-height: 24px;
   }
 
-  // Временно зафиксируем размеры картинки
   .week-product__image {
-    width: 334px;
-    height: 405px;
+    padding-top: 8px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .week-product {
-    margin-bottom: 72px;
+    margin-bottom: 64px;
   }
 
   .week-product__titles-wrapper {
     position: absolute;
-    top: 60px;
+    top: 52px;
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
@@ -145,6 +154,7 @@
   .week-product__sub-title {
     padding-right: 55px;
     padding-left: 45px;
+    padding-top: 15px;
   }
 
   .week-product__info-wrapper {
@@ -152,20 +162,24 @@
   }
 
   .week-product__text-info {
-    padding-top: 170px;
+    padding-top: 158px;
   }
 
   .week-product__order-wrapper {
     left: 175px;
+    bottom: 9px;
   }
 
   .week-product__info-list {
     font-size: 17px;
   }
 
-  // Временно зафиксируем размеры картинки
   .week-product__image {
-    width: 525px;
-    height: 640px;
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
+
+  .week-product__about {
+    margin-bottom: 48px;
   }
 }

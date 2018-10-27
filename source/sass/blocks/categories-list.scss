@@ -1,22 +1,47 @@
 @import "../variables";
 
+$base-regular: #63d1bb;
+$dark-regular: #56c3b2;
+
+$base-hover: #59d5bc;
+$dark-hover: #46c1ae;
+
+$base-icon: #3bb09d;
+$dark-icon: #35a999;
+
+$base-icon-hover: #29a592;
+$dark-icon-hover: #239f8e;
+
 .categories-list {
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin-bottom: 0;
   list-style: none;
 }
 
 .categories-list__item {
   display: flex;
-  height: 100px;
-  padding-left: 30px;
+  height: 103px;
+  padding-left: 29px;
   padding-right: 27px;
-  background-color: $base-light;
+  background-color: $base-regular;
 
   &--dark {
-    background-color: $base-medium;
+    background-color: $dark-regular;
+  }
+
+  &:active {
+    .categories-list__link {
+      opacity: 0.5;
+    }
+  }
+}
+
+.categories-list__icon {
+  color: $base-icon;
+
+  &--dark {
+    color: $dark-icon;
   }
 }
 
@@ -27,27 +52,73 @@
   align-items: center;
   color: #ffffff;
   font-weight: bold;
+  transition: opacity 0.2s;
 }
 
 .categories-list__title {
   display: inline-block;
   width: 100px;
   margin-right: auto;
+  margin-bottom: 6px;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.categories-list__icon-wrapper {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: $tablet-width) {
   .categories-list {
+    height: 125px;
     width: 668px;
     flex-direction: row;
+    align-items: flex-end;
     margin-right: auto;
     margin-left: auto;
   }
 
   .categories-list__item {
     flex-grow: 1;
-    padding-left: 36px;
-    padding-right: 33px;
+    padding-left: 35px;
+    padding-right: 35px;
     height: 120px;
+    transition: height 0.2s;
+    transform-origin: bottom;
+  }
+
+  .categories-list__item:hover {
+    height: 125px;
+    background-color: $base-hover;
+
+    .categories-list__link {
+      transform: translateY(-5px);
+    }
+
+    .categories-list__icon {
+      color: $base-icon-hover;
+    }
+
+    &--dark {
+      background-color: $dark-hover;
+
+      .categories-list__icon {
+        color: $dark-icon-hover;
+      }
+    }
+  }
+
+  .categories-list__title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .categories-list__icon-wrapper {
+    justify-content: flex-end;
   }
 }
 

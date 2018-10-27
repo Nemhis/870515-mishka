@@ -16,7 +16,10 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 4px;
+  padding-left: 0;
   list-style: none;
   border-bottom: 1px solid $character;
 }
@@ -32,7 +35,7 @@
 .footer__created-by {
   display: flex;
   justify-content: center;
-  padding-top: 24px;
+  padding-top: 21px;
 
   &:hover .footer__created-by-logo {
     color: $base-hover;
@@ -92,15 +95,17 @@
   .footer__social-list {
     border-bottom: none;
     margin-right: 80px;
+    padding-top: 30px;
+    padding-right: 0;
   }
 
   .footer__created-by {
-    padding-top: 12px;
+    padding-top: 9px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .footer__social-list {
-    margin-right: 270px;
+    margin-right: 272px;
   }
 }

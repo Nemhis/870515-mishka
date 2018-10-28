@@ -4,6 +4,8 @@
   display: none;
 
   &--opened {
+    display: block;
+
     .dialog__overlay {
       display: flex;
       justify-content: center;

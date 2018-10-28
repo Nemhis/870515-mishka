@@ -1,29 +1,7 @@
 @import "../variables";
 
-// TODO: у меня по вёрстке получилась структура из групп элементов, так вот  каждая группа имеет свои внутрение отступы
-// можно как-то выкрутиться, чтобы не задавать отступы для каждой группы, ведь придётся эти группы ещё как-то именовать
-
 .form {
-  margin-bottom: 55px;
-}
-
-.form__group {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-top: 2px solid $base-light;
-  margin-top: 12px;
-
-  // TODO: как тут правильно отступы натсроить ?
-  padding-top: 30px;
-}
-
-.form__row {
-  margin-bottom: 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-bottom: 58px;
 }
 
 .form__group-label {
@@ -42,23 +20,6 @@
   flex-direction: column;
 }
 
-.form__radio {
-  margin-bottom: 15px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.form__text-input,
-.form__checkbox {
-  margin-bottom: 20px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .form__text {
   margin-bottom: 25px;
   font-size: 13px;
@@ -67,20 +28,20 @@
 }
 
 .form__hint {
+  margin-top: 0;
+  margin-bottom: 33px;
   font-size: 14px;
   line-height: 16px;
   color: $alter-text;
 }
 
+.form__inputs-container {
+  margin-bottom: 10px;
+}
+
 @media (min-width: $tablet-width) {
   .form {
     margin-bottom: 50px;
-  }
-
-  .form__group {
-    flex-direction: row;
-    border-top: none;
-    margin-top: 0;
   }
 
   .form__group-label {
@@ -95,6 +56,7 @@
   .form__button-wrapper {
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
   }
 
   .form__group-container--dark {
@@ -104,19 +66,26 @@
   .form__inputs-group {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .form__radio {
-    margin-bottom: 23px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .form__hint,
   .form__text {
     font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__hint {
+    margin-bottom: 0;
   }
 
   .form__button {
     width: 230px;
+  }
+
+  .form__inputs-container {
+    margin-bottom: 50px;
   }
 }
 
@@ -132,5 +101,13 @@
 
   .form__button-wrapper {
     padding: 0 175px;
+  }
+
+  .form__inputs-group {
+    justify-content: flex-start;
+  }
+
+  .form__inputs-container {
+    margin-bottom: 47px;
   }
 }

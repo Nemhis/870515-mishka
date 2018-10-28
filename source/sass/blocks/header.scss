@@ -6,7 +6,7 @@
   flex-direction: column;
   position: relative;
   background-color: $bg-dark;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
 
   &--theme-hero {
     min-height: 568px;
@@ -128,7 +128,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    margin-bottom: 126px;
+    margin-bottom: 120px;
     min-height: 345px;
 
     &--theme-hero {

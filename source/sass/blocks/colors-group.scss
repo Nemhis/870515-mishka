@@ -1,0 +1,41 @@
+@import "../variables";
+
+.colors-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top: 2px solid $base-light;
+  padding-top: 31px;
+}
+
+.colors-group__checkbox {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .colors-group {
+    flex-direction: row;
+    border-top: none;
+
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 28px;
+  }
+
+  .colors-group__checkbox {
+    margin-bottom: 23px;
+
+    &:last-child {
+      margin-bottom: 23px;
+    }
+  }
+
+  .colors-group__label {
+    padding-top: 10px;
+  }
+}
+

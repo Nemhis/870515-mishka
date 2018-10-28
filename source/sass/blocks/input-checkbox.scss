@@ -9,11 +9,12 @@
   min-height: 40px;
   position: relative;
   cursor: pointer;
-  padding-left: 60px;
+  padding-left: 62px;
   padding-top: 10px;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
+  letter-spacing: 0.1px;
 
   &::before {
     content: "";
@@ -69,5 +70,11 @@
 
   .input-checkbox__input:checked ~ .input-checkbox__title::before {
     background-size: 33px 22px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .input-checkbox {
+    width: 262px;
   }
 }

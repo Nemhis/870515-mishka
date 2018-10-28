@@ -20,12 +20,22 @@
   background-color: #ffffff;
   border-bottom: 1px solid $character;
 
-  &:hover .main-nav__link-title {
-    opacity: 0.6;
-  }
+  &:not(.main-nav__list-item--index) {
+    &:hover {
+      cursor: pointer;
 
-  &:active .main-nav__link-title {
-    opacity: 0.3;
+      .main-nav__link-title {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      cursor: pointer;
+
+      .main-nav__link-title {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
@@ -284,14 +294,6 @@
   .main-nav__logo-icon {
     width: 112px;
     height: 46px;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 

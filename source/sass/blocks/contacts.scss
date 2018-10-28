@@ -57,12 +57,20 @@
 }
 
 .contacts__map-wrapper {
-  height: 457px;
-  width: 100%;
   margin-bottom: 39px;
-
-  // Временно
+  position: relative;
   background-color: #e5e5e5;
+
+  // Чтобы зафиксировать пин на карте, необходимо зафиксировать размеры карты
+  // Временно, пока интерактикную карту не вставили
+  width: 320px;
+  height: 457px;
+}
+
+.contacts__map-pin-icon {
+  position: absolute;
+  top: 144px;
+  left: 139px;
 }
 
 .contacts__contacts-wrapper {
@@ -123,6 +131,12 @@
 
   .contacts__map-wrapper {
     margin-bottom: 55px;
+    width: 768px;
+  }
+
+  .contacts__map-pin-icon {
+    top: 139px;
+    left: 363px;
   }
 
   .contacts__flag-icon-wrapper {
@@ -174,6 +188,11 @@
     width: 1050px;
     padding-left: 175px;
     margin: 0 auto;
+  }
+
+  .contacts__map-pin-icon {
+    top: 146px;
+    left: 239px;
   }
 
   .contacts__list {

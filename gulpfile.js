@@ -1,15 +1,21 @@
 "use strict";
 
 var gulp = require("gulp");
+
+// helpers
 var rename = require("gulp-rename");
-var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
+var server = require("browser-sync").create();
+
+// styles
+var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
 var csso = require("gulp-csso");
 
+// imgaes
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 
 
 gulp.task("css", function () {
@@ -52,5 +58,11 @@ gulp.task("images", function () {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 80}))
     .pipe(gulp.dest("source/img"));
 });

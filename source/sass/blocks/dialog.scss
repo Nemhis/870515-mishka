@@ -1,0 +1,118 @@
+@import "../variables";
+
+.dialog {
+  display: none;
+
+  &--opened {
+    .dialog__overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.dialog__overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.dialog__content-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-bottom: 0;
+  box-shadow: 0 5px 15px #a6a6a6;
+}
+
+.dialog__content-wrapper-inner {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.dialog__title {
+  padding: 0 50px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.dialog__hint {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 30px;
+  color: $alter-text;
+}
+
+.dialog__sizes-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+  list-style: none;
+
+  text-align: center;
+}
+
+.dialog__size {
+  width: 80px;
+  padding: 16px 30px;
+  border: 2px solid $character;
+  text-transform: uppercase;
+  color: $alter-text;
+  font-weight: bold;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+
+  &:active {
+    border-color: $base-lighest;
+  }
+}
+
+.dialog__confirm-button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .dialog__content-wrapper {
+    width: 567px;
+  }
+
+  .dialog__content-wrapper-inner {
+    width: 355px;
+  }
+
+  .dialog__title {
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .dialog__hint {
+    font-size: 17px;
+  }
+
+  .dialog__size {
+    width: 110px;
+    font-size: 17px;
+  }
+}

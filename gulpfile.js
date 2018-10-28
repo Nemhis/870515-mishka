@@ -13,10 +13,10 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 
-// imgaes
+// images & graphics
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-
+var svgstore = require("gulp-svgstore");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -49,7 +49,7 @@ gulp.task("start", gulp.series("css", "server"));
 
 
 /**
- *  ОПТИМИЗАЦИЯ ИЗОБРАЖЕНИЙ
+ *  Оптимизация изображений
  */
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -64,5 +64,17 @@ gulp.task("images", function () {
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 80}))
+    .pipe(gulp.dest("source/img"));
+});
+
+/**
+ * Сборка спрайта
+ */
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"));
 });

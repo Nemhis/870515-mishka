@@ -45,6 +45,10 @@
   height: auto;
 }
 
+.product-card__basket-icon {
+  color: #d5d5d5;
+}
+
 @media (min-width: $tablet-width) {
   .product-card {
     width: 668px;

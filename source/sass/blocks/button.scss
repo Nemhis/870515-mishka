@@ -20,4 +20,18 @@
     background-color: $alter-text;
     color: #8d8d8d;
   }
+
+  &--light-theme {
+    border: none;
+    background-color: $base-lighest;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $base-hover;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }

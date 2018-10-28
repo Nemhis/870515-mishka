@@ -1,0 +1,38 @@
+@import "../variables";
+
+.types-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top: 2px solid $base-light;
+
+  margin-top: 32px;
+  margin-bottom: 40px;
+  padding-top: 31px;
+}
+
+.types-group__radio {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .types-group {
+    flex-direction: row;
+    border-top: none;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .types-group__radio {
+    margin-bottom: 23px;
+  }
+
+  .types-group__label {
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../variables";
+
+.user-fields-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top: 2px solid $base-light;
+
+  margin-top: 38px;
+  padding-top: 35px;
+}
+
+.user-fields-group__text-input {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-fields-group {
+    flex-direction: row;
+    border-top: none;
+    margin-top: 0;
+
+    padding-top: 65px;
+    padding-bottom: 49px;
+  }
+
+  .user-fields-group__text-input {
+    margin-bottom: 36px;
+  }
+}

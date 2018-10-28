@@ -2,11 +2,11 @@
 
 .input-text-area {
   color: $alter-text;
-  // input-text-area
 }
 
 .input-text-area__input {
   width: 100%;
+  height: 143px;
   border: 2px solid $alter-text;
   padding: 16px;
   outline: none;
@@ -24,6 +24,7 @@
 @media (min-width: $tablet-width) {
   .input-text-area__input {
     width: 500px;
+    font-size: 19px;
   }
 }
 

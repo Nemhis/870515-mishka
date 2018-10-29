@@ -144,7 +144,7 @@
             <span class="week-product__price-value">990&nbsp;руб.</span>
           </div>
 
-          <a href="#" class="button">Заказать</a>
+          <button class="week-product__button button">Заказать</button>
         </div>
       </section>
 
@@ -366,11 +366,10 @@
         </a>
       </div>
 
-      <script src="js/application.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4_JvFq_Z6iMCqfb1yM0hvIcW9SQh7CGs&callback=initMap"></script>
     </footer>
 
-    <div class="dialog" aria-hidden="true">
+    <div id="cart-dialog" class="dialog" aria-hidden="true">
       <div class="dialog__overlay">
         <div class="dialog__content-wrapper">
           <div class="dialog__content-wrapper-inner">
@@ -388,5 +387,7 @@
         </div>
       </div>
     </div>
+
+    <script src="js/application.js"></script>
   </body>
 </html>

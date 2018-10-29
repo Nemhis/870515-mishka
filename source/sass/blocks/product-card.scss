@@ -5,7 +5,6 @@
   flex-direction: column;
   width: 260px;
   border: 1px solid $character;
-  cursor: pointer;
   transition: box-shadow 0.3s;
 
   &:hover {
@@ -53,8 +52,24 @@
   display: block;
 }
 
-.product-card__basket-icon {
+.product-card__cart-icon {
   color: #d5d5d5;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $base-hover;
+  }
+
+  &:active {
+    color: $base-hover;
+    opacity: 0.3;
+  }
+}
+
+.product-card__cart-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {

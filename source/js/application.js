@@ -27,3 +27,30 @@ function initMap() {
     center: coordinates
   });
 }
+
+var dialog = document.getElementById('cart-dialog');
+
+if (dialog) {
+  var confirmButton = dialog.querySelector('.dialog__confirm-button');
+
+  confirmButton.addEventListener('click', function ()  {
+    dialog.classList.remove('dialog--opened');
+  });
+
+  var openDialog = function () {
+    dialog.classList.add('dialog--opened');
+  };
+
+  var cartButtons = document.querySelectorAll('.product-card__cart-button');
+
+  Array.prototype.forEach.call(cartButtons, function (button) {
+    button.addEventListener('click', openDialog);
+  });
+
+  var weekProductButton = document.querySelector('.week-product__button');
+
+  if (weekProductButton) {
+    weekProductButton.addEventListener('click', openDialog);
+  }
+}
+

@@ -1,3 +1,4 @@
+// Menu
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -13,3 +14,16 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+
+// Maps
+function initMap() {
+  var coordinates = {lat: 59.938878, lng: 30.323069};
+
+  map = new google.maps.Map(document.querySelector('.js-map'), {
+    zoom: 16,
+    disableDefaultUI: true,
+    scrollWheel: false,
+    center: coordinates
+  });
+}

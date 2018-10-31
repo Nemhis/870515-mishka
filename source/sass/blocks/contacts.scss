@@ -184,6 +184,7 @@
     width: 1050px;
     padding-left: 175px;
     margin: 0 auto;
+    position: relative;
   }
 
   .contacts__map-pin-icon {
@@ -211,5 +212,6 @@
     width: auto;
     position: absolute;
     bottom: 0;
+    left: 175px;
   }
 }

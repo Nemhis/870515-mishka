@@ -64,21 +64,21 @@
 .product-card__cart-icon {
   color: #d5d5d5;
   transition: color 0.3s;
-
-  &:hover {
-    color: $base-hover;
-  }
-
-  &:active {
-    color: $base-hover;
-    opacity: 0.3;
-  }
 }
 
 .product-card__cart-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover .product-card__cart-icon {
+    color: $base-hover;
+  }
+
+  &:active .product-card__cart-icon {
+    color: $base-hover;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -88,9 +88,10 @@
   }
 
   .product-card__info-container {
+    flex-basis: 0; // For IE 11
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     padding: 25px 26px;
   }
 

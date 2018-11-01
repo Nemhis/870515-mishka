@@ -108,7 +108,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-// TODO: спрайт пока не вставляется в html, но мы его всё равно забилдим на будущее
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("build", "server"));

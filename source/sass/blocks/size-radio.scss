@@ -1,0 +1,40 @@
+@import "../variables";
+
+.size-radio {
+  // size-radio block
+}
+
+.size-radio__title {
+  display: inline-block;
+  width: 80px;
+  padding: 16px 30px;
+  border: 2px solid $character;
+  text-transform: uppercase;
+  color: $alter-text;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+
+  &:active {
+    border-color: $base-lighest;
+  }
+}
+
+.size-radio__input {
+  display: none;
+}
+
+.size-radio__input:checked ~ .size-radio__title {
+  border-color: $base-lighest;
+}
+
+@media (min-width: $tablet-width) {
+  .size-radio__title {
+    width: 110px;
+    font-size: 17px;
+  }
+}
+

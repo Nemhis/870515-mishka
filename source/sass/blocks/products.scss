@@ -33,17 +33,18 @@
 
 @media (min-width: $desktop-width) {
   .products {
-    margin-bottom: 57px;
+    margin-bottom: 27px;
     padding-top: 6px;
   }
 
   .products__products-list {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .products__product-card {
-    margin-bottom: 0;
+    margin-bottom: 30px;
     margin-right: 25px;
 
     &:last-child {

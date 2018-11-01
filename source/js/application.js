@@ -32,8 +32,7 @@ function initMap() {
 
   var marker = new google.maps.Marker({
     position: coordinates,
-    map: map,
-    icon: 'img/icon-map-pin.svg'
+    map: map
   });
 }
 

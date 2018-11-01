@@ -6,7 +6,7 @@
   flex-direction: column;
   position: relative;
   background-color: $bg-dark;
-  margin-bottom: 23px;
+  margin-bottom: 27px;
 
   &--theme-hero {
     min-height: 568px;
@@ -19,6 +19,19 @@
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-mobile@2x.jpg");
+    }
+
+    .header__title-wrapper {
+      margin-bottom: 122px;
+    }
+
+    .header__title {
+      width: 310px;
+      margin: 0 auto;
+    }
+
+    .header__categories-list {
+      margin-bottom: 0;
     }
   }
 }
@@ -34,7 +47,7 @@
 }
 
 .header__categories-list {
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -79,6 +92,15 @@
 
       .header__title {
         padding-top: 61px;
+        width: auto;
+      }
+
+      .header__title-wrapper {
+        margin-bottom: 368px;
+      }
+
+      .header__categories-list {
+        margin-bottom: 0;
       }
     }
   }
@@ -145,6 +167,10 @@
 
       .header__title {
         padding-top: 113px;
+      }
+
+      .header__title-wrapper {
+        margin-bottom: 354px;
       }
     }
   }

@@ -19,8 +19,11 @@ navToggle.addEventListener('click', function() {
 // Maps
 function initMap() {
   var coordinates = {lat: 59.938878, lng: 30.323069};
+  var mapContainer = document.querySelector('.js-map');
 
-  var map = new google.maps.Map(document.querySelector('.js-map'), {
+  mapContainer.classList.add('contacts__map-wrapper--interactive');
+
+  var map = new google.maps.Map(mapContainer, {
     zoom: 16.6,
     disableDefaultUI: true,
     scrollWheel: false,

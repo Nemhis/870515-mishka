@@ -60,8 +60,12 @@
   margin-bottom: 39px;
   position: relative;
   background-color: #e5e5e5;
-  width: 100vw;
   height: 457px;
+  width: 320px;
+
+  &--interactive {
+    width: 100vw;
+  }
 }
 
 .contacts__map-pin-icon {
@@ -128,6 +132,11 @@
 
   .contacts__map-wrapper {
     margin-bottom: 55px;
+    width: 768px;
+
+    &--interactive {
+      width: 100vw;
+    }
   }
 
   .contacts__map-pin-icon {

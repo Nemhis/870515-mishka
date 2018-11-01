@@ -7,6 +7,8 @@ var rename = require("gulp-rename");
 var del = require("del");
 var plumber = require("gulp-plumber");
 var server = require("browser-sync").create();
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 
 // styles
 var sass = require("gulp-sass");
@@ -66,7 +68,9 @@ gulp.task("sprite", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  // TODO: здесь будет шаблонизация post html
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest("build"));
 });
 

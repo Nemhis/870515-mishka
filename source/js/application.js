@@ -63,4 +63,3 @@ if (dialog) {
     weekProductButton.addEventListener('click', openDialog);
   }
 }
-

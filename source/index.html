@@ -142,7 +142,7 @@
             <span class="week-product__price-value">990&nbsp;руб.</span>
           </div>
 
-          <button class="week-product__button button">Заказать</button>
+          <a href="form.html" class="week-product__button button">Заказать</a>
         </div>
       </section>
 
@@ -290,23 +290,28 @@
       <div class="footer__content-wrapper center-layout">
         <div class="footer__logo">
           <a href="/">
-              <svg class="footer__logo-icon" width="102px" height="34px">
-                <use xlink:href="#icon-logo-footer"></use>
-              </svg>
+            <span class="visually-hidden">Мишка - логотип</span>
+
+            <svg class="footer__logo-icon" width="102px" height="34px" aria-hidden="true">
+              <use xlink:href="#icon-logo-footer"></use>
+            </svg>
           </a>
         </div>
 
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a href="#">
-              <svg class="footer__social-icon" width="22px" height="21px">
+              <span class="visually-hidden">Instagram</span>
+
+              <svg class="footer__social-icon" width="22px" height="21px" aria-hidden="true">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
             <a href="#">
-              <svg class="footer__social-icon" width="15px" height="28px">
+              <span class="visually-hidden">Facebook</span>
+              <svg class="footer__social-icon" width="15px" height="28px" aria-hidden="true">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
@@ -314,7 +319,8 @@
 
           <li class="footer__social-item">
             <a href="#">
-              <svg class="footer__social-icon" width="23px" height="20px">
+              <span class="visually-hidden">Twitter</span>
+              <svg class="footer__social-icon" width="23px" height="20px" aria-hidden="true">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
@@ -324,7 +330,7 @@
         <a class="footer__created-by" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="footer__created-by-title">Разработано</span>
 
-          <svg class="footer__created-by-logo" width="27px" height="34px">
+          <svg class="footer__created-by-logo" width="27px" height="34px" aria-hidden="true">
             <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>

@@ -43,8 +43,9 @@ if (dialog) {
     dialog.classList.remove('dialog--opened');
   });
 
-  var openDialog = function () {
+  var openDialog = function (event) {
     dialog.classList.add('dialog--opened');
+    event.preventDefault();
   };
 
   var cartButtons = document.querySelectorAll('.product-card__cart-button');

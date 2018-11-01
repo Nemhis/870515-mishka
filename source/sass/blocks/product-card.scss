@@ -132,6 +132,7 @@
   }
 
   .product-card__info-container {
+    flex-basis: auto; // For IE 11
     padding-right: 33px;
     padding-left: 25px;
     padding-top: 25px;

@@ -95,4 +95,13 @@
   .input-text {
     width: 700px;
   }
+
+  .input-text__input {
+    padding-bottom: 15px;
+  }
+
+  .input-text__icon--email,
+  .input-text__icon--phone {
+    right: 5px;
+  }
 }

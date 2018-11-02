@@ -38,6 +38,7 @@ $dark-icon-hover: #239f8e;
 }
 
 .categories-list__icon {
+  overflow: hidden;
   color: $base-icon;
 
   &--dark {

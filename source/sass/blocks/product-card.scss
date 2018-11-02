@@ -62,6 +62,7 @@
 }
 
 .product-card__cart-icon {
+  overflow: hidden;
   color: #d5d5d5;
   transition: color 0.3s;
 }

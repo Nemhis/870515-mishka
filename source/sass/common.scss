@@ -38,7 +38,8 @@ html {
   overflow: hidden;
 }
 
-.center-layout {width: 260px;
+.center-layout {
+  width: 260px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
